@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Relatórios Financeiros{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-chart-line"></i> Relatórios Financeiros</h2>
+                <div class="btn-group">
+                    <button class="btn btn-outline-primary" onclick="exportReport()">
+                        <i class="fas fa-download"></i> Exportar
+                    </button>
+                    <button class="btn btn-primary" onclick="updateReport()">
+                        <i class="fas fa-sync"></i> Atualizar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resumo Financeiro -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h4>R$ 2.847,00</h4>
+                            <p class="mb-0">Receita Total</p>
+                            <small>+15% vs mês anterior</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h4>R$ 1.124,00</h4>
+                            <p class="mb-0">Custo Total</p>
+                            <small>+8% vs mês anterior</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h4>R$ 1.723,00</h4>
+                            <p class="mb-0">Lucro Bruto</p>
+                            <small>+22% vs mês anterior</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h4>60,5%</h4>
+                            <p class="mb-0">Margem de Lucro</p>
+                            <small>+3% vs mês anterior</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Receita por Paciente -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Receita por Paciente (Últimos 30 dias)</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Paciente</th>
+                                    <th>Unidade</th>
+                                    <th>Sessões</th>
+                                    <th>Receita Total</th>
+                                    <th>Ticket Médio</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Isleila</strong><br><small class="text-muted">PAC004</small></td>
+                                    <td><span class="badge bg-info">Ribeirão Preto</span></td>
+                                    <td>3</td>
+                                    <td><strong>R$ 1.248,00</strong></td>
+                                    <td>R$ 416,00</td>
+                                    <td><span class="badge bg-success">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Andreia</strong><br><small class="text-muted">PAC005</small></td>
+                                    <td><span class="badge bg-success">Bauru</span></td>
+                                    <td>3</td>
+                                    <td><strong>R$ 798,00</strong></td>
+                                    <td>R$ 266,00</td>
+                                    <td><span class="badge bg-warning">Pendente</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dr. Antonio</strong><br><small class="text-muted">PAC001</small></td>
+                                    <td><span class="badge bg-info">Ribeirão Preto</span></td>
+                                    <td>1</td>
+                                    <td><strong>R$ 388,00</strong></td>
+                                    <td>R$ 388,00</td>
+                                    <td><span class="badge bg-success">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rita</strong><br><small class="text-muted">PAC002</small></td>
+                                    <td><span class="badge bg-info">Ribeirão Preto</span></td>
+                                    <td>3</td>
+                                    <td><strong>R$ 258,00</strong></td>
+                                    <td>R$ 86,00</td>
+                                    <td><span class="badge bg-info">Curso</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Beatriz Mendes</strong><br><small class="text-muted">PAC003</small></td>
+                                    <td><span class="badge bg-info">Ribeirão Preto</span></td>
+                                    <td>1</td>
+                                    <td><strong>R$ 155,00</strong></td>
+                                    <td>R$ 155,00</td>
+                                    <td><span class="badge bg-success">Pago</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function exportReport() {
+    alert('Exportando relatório financeiro...');
+}
+
+function updateReport() {
+    alert('Atualizando dados do relatório...');
+}
+</script>
+{% endblock %}
+

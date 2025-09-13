@@ -1,0 +1,373 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Farmácia Estoque{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Header com Resumo Geral -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2><i class="bi bi-speedometer2"></i> Dashboard</h2>
+                <div class="text-muted">
+                    <i class="bi bi-clock"></i> Última atualização: {{ "now"|date:"d/m/Y H:i" }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards de Estatísticas Principais -->
+    <div class="row mb-4">
+        <!-- Ribeirão Preto -->
+        <div class="col-md-6">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-building"></i> Ribeirão Preto (RP)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-3">
+                            <h4 class="text-primary">{{ rp_stats.substances }}</h4>
+                            <small class="text-muted">Substâncias</small>
+                        </div>
+                        <div class="col-3">
+                            <h4 class="text-success">{{ rp_stats.stock }}</h4>
+                            <small class="text-muted">Unidades</small>
+                        </div>
+                        <div class="col-3">
+                            <h4 class="text-info">{{ rp_stats.active_patients }}</h4>
+                            <small class="text-muted">Pacientes</small>
+                        </div>
+                        <div class="col-3">
+                            {% if rp_stats.alerts > 0 %}
+                                <h4 class="text-danger">{{ rp_stats.alerts }}</h4>
+                            {% else %}
+                                <h4 class="text-success">{{ rp_stats.alerts }}</h4>
+                            {% endif %}
+                            <small class="text-muted">Alertas</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bauru -->
+        <div class="col-md-6">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-building"></i> Bauru (BR)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-3">
+                            <h4 class="text-primary">{{ bauru_stats.substances }}</h4>
+                            <small class="text-muted">Substâncias</small>
+                        </div>
+                        <div class="col-3">
+                            <h4 class="text-success">{{ bauru_stats.stock }}</h4>
+                            <small class="text-muted">Unidades</small>
+                        </div>
+                        <div class="col-3">
+                            <h4 class="text-info">{{ bauru_stats.active_patients }}</h4>
+                            <small class="text-muted">Pacientes</small>
+                        </div>
+                        <div class="col-3">
+                            {% if bauru_stats.alerts > 0 %}
+                                <h4 class="text-danger">{{ bauru_stats.alerts }}</h4>
+                            {% else %}
+                                <h4 class="text-success">{{ bauru_stats.alerts }}</h4>
+                            {% endif %}
+                            <small class="text-muted">Alertas</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards de Atividade Hoje -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center bg-light">
+                <div class="card-body">
+                    <h3 class="text-primary">{{ sessions_today }}</h3>
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-calendar-check"></i> Sessões Hoje
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card text-center bg-light">
+                <div class="card-body">
+                    <h3 class="text-warning">{{ transfers_today }}</h3>
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-arrow-left-right"></i> Transferências Hoje
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card text-center bg-light">
+                <div class="card-body">
+                    <h3 class="text-info">{{ weekly_consumption }}</h3>
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-graph-down"></i> Consumo Semanal
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card text-center bg-light">
+                <div class="card-body">
+                    {% if movement_growth >= 0 %}
+                        <h3 class="text-success">+{{ movement_growth }}%</h3>
+                    {% else %}
+                        <h3 class="text-danger">{{ movement_growth }}%</h3>
+                    {% endif %}
+                    <p class="text-muted mb-0">
+                        <i class="bi bi-trending-up"></i> Crescimento
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Alertas Críticos -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-exclamation-triangle text-warning"></i> Alertas Críticos
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Estoque Baixo:</span>
+                                {% if critical_alerts.low_stock > 0 %}
+                                    <span class="badge bg-danger">{{ critical_alerts.low_stock }}</span>
+                                {% else %}
+                                    <span class="badge bg-success">{{ critical_alerts.low_stock }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Vencendo (30d):</span>
+                                {% if critical_alerts.expiring_soon > 0 %}
+                                    <span class="badge bg-warning">{{ critical_alerts.expiring_soon }}</span>
+                                {% else %}
+                                    <span class="badge bg-success">{{ critical_alerts.expiring_soon }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Vencidos:</span>
+                                {% if critical_alerts.expired > 0 %}
+                                    <span class="badge bg-danger">{{ critical_alerts.expired }}</span>
+                                {% else %}
+                                    <span class="badge bg-success">{{ critical_alerts.expired }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>Estoque Zero:</span>
+                                {% if critical_alerts.zero_stock > 0 %}
+                                    <span class="badge bg-danger">{{ critical_alerts.zero_stock }}</span>
+                                {% else %}
+                                    <span class="badge bg-success">{{ critical_alerts.zero_stock }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="{% url 'core:alerts' %}" class="btn btn-outline-warning btn-sm">
+                            <i class="bi bi-eye"></i> Ver Todos os Alertas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Substâncias Utilizadas -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-trophy text-warning"></i> Top Substâncias (30 dias)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    {% if top_substances %}
+                        <div class="list-group list-group-flush">
+                            {% for substance in top_substances|slice:":5" %}
+                            <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <div>
+                                    <strong>{{ substance.substance__nome_comum }}</strong>
+                                    <br><small class="text-muted">{{ substance.vezes_usado }} uso{{ substance.vezes_usado|pluralize:"s" }}</small>
+                                </div>
+                                <span class="badge bg-primary rounded-pill">{{ substance.total_usado }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p class="text-muted text-center">Nenhuma movimentação nos últimos 30 dias</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Transferências Recentes -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <i class="bi bi-arrow-left-right text-info"></i> Transferências Recentes
+                    </h5>
+                    <a href="{% url 'inventory:transfers_list' %}" class="btn btn-outline-info btn-sm">
+                        Ver Todas
+                    </a>
+                </div>
+                <div class="card-body">
+                    {% if recent_transfers %}
+                        {% for transfer in recent_transfers %}
+                        <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                            <div>
+                                <strong>{{ transfer.numero }}</strong>
+                                <br>
+                                <small class="text-muted">
+                                    <span class="badge bg-info">{{ transfer.unidade_origem.codigo }}</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                    <span class="badge bg-success">{{ transfer.unidade_destino.codigo }}</span>
+                                </small>
+                                <br>
+                                <small class="text-muted">{{ transfer.data_criacao|date:"d/m H:i" }}</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-primary">{{ transfer.total_itens }} item{{ transfer.total_itens|pluralize:"s" }}</span>
+                                <br>
+                                <small class="text-muted">{{ transfer.criado_por.username }}</small>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted text-center">Nenhuma transferência recente</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Movimentações Recentes -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <i class="bi bi-activity text-success"></i> Movimentações Recentes
+                    </h5>
+                    <a href="{% url 'inventory:stock_movements' %}" class="btn btn-outline-success btn-sm">
+                        Ver Todas
+                    </a>
+                </div>
+                <div class="card-body">
+                    {% if recent_movements %}
+                        {% for movement in recent_movements %}
+                        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                            <div>
+                                <strong>{{ movement.substance.nome_comum }}</strong>
+                                <br>
+                                <small class="text-muted">
+                                    {% if movement.tipo == 'entrada' %}
+                                        <i class="bi bi-arrow-down-circle text-success"></i> Entrada
+                                    {% else %}
+                                        <i class="bi bi-arrow-up-circle text-danger"></i> Saída
+                                    {% endif %}
+                                    - {{ movement.unit.codigo }}
+                                    {% if movement.paciente %}
+                                        - {{ movement.paciente.nome }}
+                                    {% endif %}
+                                </small>
+                                <br>
+                                <small class="text-muted">{{ movement.data_hora|date:"d/m H:i" }}</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge {% if movement.tipo == 'entrada' %}bg-success{% else %}bg-danger{% endif %}">
+                                    {{ movement.quantidade }}
+                                </span>
+                                <br>
+                                <small class="text-muted">{{ movement.user.username }}</small>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted text-center">Nenhuma movimentação recente</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ações Rápidas -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-lightning text-warning"></i> Ações Rápidas
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-2">
+                            <a href="{% url 'inventory:transfers_list' %}" class="btn btn-outline-primary btn-lg w-100 mb-2">
+                                <i class="bi bi-arrow-left-right"></i>
+                                <br>Transferências
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{% url 'inventory:patients_list' %}" class="btn btn-outline-info btn-lg w-100 mb-2">
+                                <i class="bi bi-people"></i>
+                                <br>Pacientes
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{% url 'core:alerts' %}" class="btn btn-outline-warning btn-lg w-100 mb-2">
+                                <i class="bi bi-exclamation-triangle"></i>
+                                <br>Alertas
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{% url 'inventory:stock_movements' %}" class="btn btn-outline-success btn-lg w-100 mb-2">
+                                <i class="bi bi-activity"></i>
+                                <br>Movimentações
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{% url 'inventory:protocols_list' %}" class="btn btn-outline-secondary btn-lg w-100 mb-2">
+                                <i class="bi bi-clipboard-check"></i>
+                                <br>Protocolos
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{% url 'inventory:financial_reports' %}" class="btn btn-outline-dark btn-lg w-100 mb-2">
+                                <i class="bi bi-graph-up"></i>
+                                <br>Relatórios
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

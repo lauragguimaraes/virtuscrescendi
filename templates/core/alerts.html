@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+
+{% block title %}Alertas - Farmácia Estoque{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">
+        <i class="bi bi-exclamation-triangle"></i> Alertas do Sistema
+    </h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <button type="button" class="btn btn-sm btn-primary" onclick="location.reload()">
+            <i class="bi bi-arrow-clockwise"></i> Atualizar
+        </button>
+    </div>
+</div>
+
+<!-- Resumo dos Alertas -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-white bg-danger">
+            <div class="card-body">
+                <h5 class="card-title">Lotes Vencidos</h5>
+                <h2>{{ expired_batches|length }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Vencendo em 30 dias</h5>
+                <h2>{{ expiring_30_days|length }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Vencendo em 60 dias</h5>
+                <h2>{{ expiring_60_days|length }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title">Estoque Baixo</h5>
+                <h2>{{ low_stock_substances|length }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Lotes Vencidos -->
+{% if expired_batches %}
+<div class="card mb-4 border-danger">
+    <div class="card-header bg-danger text-white">
+        <h5 class="mb-0">
+            <i class="bi bi-x-circle"></i> Lotes Vencidos ({{ expired_batches|length }})
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Substância</th>
+                        <th>Lote</th>
+                        <th>Validade</th>
+                        <th>Estoque</th>
+                        <th>Fornecedor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for batch in expired_batches %}
+                    <tr>
+                        <td>
+                            <strong>{{ batch.substance.nome_comum }}</strong><br>
+                            <small class="text-muted">{{ batch.substance.concentracao }}</small>
+                        </td>
+                        <td>{{ batch.lote }}</td>
+                        <td>
+                            <span class="badge bg-danger">{{ batch.validade|date:"d/m/Y" }}</span>
+                        </td>
+                        <td>{{ batch.get_estoque_atual|floatformat:1 }}</td>
+                        <td>{{ batch.fornecedor }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-danger" onclick="alert('Funcionalidade em desenvolvimento')">
+                                <i class="bi bi-trash"></i> Descartar
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Lotes Vencendo em 30 dias -->
+{% if expiring_30_days %}
+<div class="card mb-4 border-warning">
+    <div class="card-header bg-warning text-dark">
+        <h5 class="mb-0">
+            <i class="bi bi-clock"></i> Vencendo em 30 dias ({{ expiring_30_days|length }})
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Substância</th>
+                        <th>Lote</th>
+                        <th>Validade</th>
+                        <th>Estoque</th>
+                        <th>Dias Restantes</th>
+                        <th>Fornecedor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for batch in expiring_30_days %}
+                    <tr>
+                        <td>
+                            <strong>{{ batch.substance.nome_comum }}</strong><br>
+                            <small class="text-muted">{{ batch.substance.concentracao }}</small>
+                        </td>
+                        <td>{{ batch.lote }}</td>
+                        <td>
+                            <span class="badge bg-warning">{{ batch.validade|date:"d/m/Y" }}</span>
+                        </td>
+                        <td>{{ batch.get_estoque_atual|floatformat:1 }}</td>
+                        <td>
+                            {% with days_left=batch.validade|timeuntil %}
+                                <span class="badge bg-warning">{{ days_left|slice:":2" }} dias</span>
+                            {% endwith %}
+                        </td>
+                        <td>{{ batch.fornecedor }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Substâncias com Estoque Baixo -->
+{% if low_stock_substances %}
+<div class="card mb-4 border-info">
+    <div class="card-header bg-info text-white">
+        <h5 class="mb-0">
+            <i class="bi bi-arrow-down"></i> Estoque Baixo ({{ low_stock_substances|length }})
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Substância</th>
+                        <th>Estoque Atual</th>
+                        <th>Estoque Mínimo</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in low_stock_substances %}
+                    <tr>
+                        <td>
+                            <strong>{{ item.substance.nome_comum }}</strong><br>
+                            <small class="text-muted">{{ item.substance.concentracao }}</small>
+                        </td>
+                        <td>
+                            <span class="h5 text-danger">{{ item.current_stock|floatformat:1 }}</span>
+                        </td>
+                        <td>{{ item.minimum_stock|floatformat:1 }}</td>
+                        <td>
+                            <span class="badge bg-danger">Estoque Baixo</span>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary" onclick="alert('Funcionalidade em desenvolvimento')">
+                                <i class="bi bi-plus-circle"></i> Solicitar Compra
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Lotes Vencendo em 60 dias -->
+{% if expiring_60_days %}
+<div class="card mb-4 border-secondary">
+    <div class="card-header bg-secondary text-white">
+        <h5 class="mb-0">
+            <i class="bi bi-calendar-week"></i> Vencendo em 60 dias ({{ expiring_60_days|length }})
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Substância</th>
+                        <th>Lote</th>
+                        <th>Validade</th>
+                        <th>Estoque</th>
+                        <th>Fornecedor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for batch in expiring_60_days %}
+                    <tr>
+                        <td>
+                            <strong>{{ batch.substance.nome_comum }}</strong><br>
+                            <small class="text-muted">{{ batch.substance.concentracao }}</small>
+                        </td>
+                        <td>{{ batch.lote }}</td>
+                        <td>{{ batch.validade|date:"d/m/Y" }}</td>
+                        <td>{{ batch.get_estoque_atual|floatformat:1 }}</td>
+                        <td>{{ batch.fornecedor }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Mensagem quando não há alertas -->
+{% if not expired_batches and not expiring_30_days and not expiring_60_days and not low_stock_substances %}
+<div class="card">
+    <div class="card-body text-center py-5">
+        <i class="bi bi-check-circle text-success" style="font-size: 4rem;"></i>
+        <h3 class="mt-3 text-success">Tudo em Ordem!</h3>
+        <p class="text-muted">Não há alertas no momento. Todos os lotes estão dentro da validade e os estoques estão adequados.</p>
+        <a href="{% url 'core:dashboard' %}" class="btn btn-primary">
+            <i class="bi bi-arrow-left"></i> Voltar ao Dashboard
+        </a>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+

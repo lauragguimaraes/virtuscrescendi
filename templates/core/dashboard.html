@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Farmácia Estoque{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">
+        <i class="bi bi-speedometer2"></i> Dashboard - Controle de Estoque
+    </h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <a href="{% url 'inventory:stock_entry' %}" class="btn btn-success btn-sm">
+                <i class="bi bi-plus-circle"></i> Nova Entrada
+            </a>
+            <a href="{% url 'inventory:stock_exit' %}" class="btn btn-primary btn-sm">
+                <i class="bi bi-arrow-right-circle"></i> Nova Saída
+            </a>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.reload()">
+            <i class="bi bi-arrow-clockwise"></i> Atualizar
+        </button>
+    </div>
+</div>
+
+<!-- Resumo por Unidades -->
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card border-primary">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-building"></i> Ribeirão Preto
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-4">
+                        <h4 class="text-primary">{{ rp_stats.substances }}</h4>
+                        <small class="text-muted">Substâncias</small>
+                    </div>
+                    <div class="col-4">
+                        <h4 class="text-info">{{ rp_stats.stock|floatformat:0 }}</h4>
+                        <small class="text-muted">Unidades</small>
+                    </div>
+                    <div class="col-4">
+                        <h4 class="text-warning">{{ rp_stats.alerts }}</h4>
+                        <small class="text-muted">Alertas</small>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <small class="text-muted">Última movimentação:</small>
+                    <small class="text-muted">{{ rp_stats.last_movement|date:"d/m H:i"|default:"Nenhuma" }}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card border-success">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-building"></i> Bauru
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-4">
+                        <h4 class="text-primary">{{ bauru_stats.substances }}</h4>
+                        <small class="text-muted">Substâncias</small>
+                    </div>
+                    <div class="col-4">
+                        <h4 class="text-info">{{ bauru_stats.stock|floatformat:0 }}</h4>
+                        <small class="text-muted">Unidades</small>
+                    </div>
+                    <div class="col-4">
+                        <h4 class="text-warning">{{ bauru_stats.alerts }}</h4>
+                        <small class="text-muted">Alertas</small>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <small class="text-muted">Última movimentação:</small>
+                    <small class="text-muted">{{ bauru_stats.last_movement|date:"d/m H:i"|default:"Nenhuma" }}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pacientes e Sessões Recentes -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">
+                    <i class="bi bi-people"></i> Pacientes e Sessões Recentes
+                </h5>
+                <a href="{% url 'inventory:patients_list' %}" class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-eye"></i> Ver Todos
+                </a>
+            </div>
+            <div class="card-body">
+                {% if recent_movements %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Data/Hora</th>
+                                <th>Tipo</th>
+                                <th>Substância</th>
+                                <th>Quantidade</th>
+                                <th>Paciente</th>
+                                <th>Unidade</th>
+                                <th>Usuário</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for movement in recent_movements|slice:":5" %}
+                            <tr>
+                                <td>
+                                    <small>{{ movement.data_hora|date:"d/m/Y H:i" }}</small>
+                                </td>
+                                <td>
+                                    {% if movement.tipo == 'entrada' %}
+                                        <span class="badge bg-success">Entrada</span>
+                                    {% elif movement.tipo == 'saida' %}
+                                        <span class="badge bg-primary">Saída</span>
+                                    {% else %}
+                                        <span class="badge bg-warning">{{ movement.get_tipo_display }}</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <strong>{{ movement.substance.nome_comum }}</strong><br>
+                                    <small class="text-muted">{{ movement.batch.lote }}</small>
+                                </td>
+                                <td>{{ movement.quantidade|floatformat:1 }}</td>
+                                <td>
+                                    {% if movement.paciente %}
+                                        <strong>{{ movement.paciente.nome }}</strong><br>
+                                        <small class="text-muted">{{ movement.paciente.codigo }}</small>
+                                    {% else %}
+                                        <span class="text-muted">-</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <span class="badge {% if movement.unit.codigo == 'RP' %}bg-info{% else %}bg-success{% endif %}">
+                                        {{ movement.unit.nome }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <small>{{ movement.user.username }}</small>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center py-4">
+                    <i class="bi bi-clock-history text-muted" style="font-size: 3rem;"></i>
+                    <h5 class="text-muted mt-2">Nenhuma movimentação recente</h5>
+                    <p class="text-muted">As movimentações aparecerão aqui quando houver atividade no sistema.</p>
+                </div>
+                {% endif %}
+                
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <h5 class="text-primary">{{ total_substances }}</h5>
+                            <small class="text-muted">Total de Substâncias</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <h5 class="text-success">{{ recent_movements|length }}</h5>
+                            <small class="text-muted">Movimentações (7 dias)</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <h5 class="text-warning">{{ total_stock|floatformat:0 }}</h5>
+                            <small class="text-muted">Total em Estoque</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alertas e Ações Rápidas -->
+<div class="row">
+    <!-- Alertas Importantes -->
+    <div class="col-md-8">
+        <div class="card border-warning">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0">
+                    <i class="bi bi-exclamation-triangle"></i> Alertas Importantes
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="alert alert-info">
+                            <h6><i class="bi bi-arrow-down"></i> Estoque Baixo</h6>
+                            {% if low_stock_substances %}
+                                <p class="mb-2"><strong>{{ low_stock_count }}</strong> substância{{ low_stock_count|pluralize:"s" }} com estoque abaixo do mínimo:</p>
+                                <ul class="mb-2" style="font-size: 0.9em;">
+                                    {% for substance in low_stock_substances|slice:":4" %}
+                                        <li>{{ substance.nome_comum }} ({{ substance.get_estoque_total|floatformat:1 }} unidades)</li>
+                                    {% endfor %}
+                                    {% if low_stock_count > 4 %}
+                                        <li>E mais {{ low_stock_count|add:"-4" }} substância{{ low_stock_count|add:"-4"|pluralize:"s" }}...</li>
+                                    {% endif %}
+                                </ul>
+                            {% else %}
+                                <p class="mb-2">✅ Todos os estoques estão adequados!</p>
+                            {% endif %}
+                            <a href="{% url 'core:alerts' %}" class="btn btn-sm btn-outline-info">Ver Todos</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="alert alert-success">
+                            <h6><i class="bi bi-check-circle"></i> Situação Geral</h6>
+                            <p class="mb-2">Sistema funcionando normalmente:</p>
+                            <ul class="mb-2" style="font-size: 0.9em;">
+                                <li>✅ {{ expired_batches_count }} lote{{ expired_batches_count|pluralize:"s" }} vencido{{ expired_batches_count|pluralize:"s" }}</li>
+                                <li>✅ {{ expiring_batches|length }} lote{{ expiring_batches|length|pluralize:"s" }} vencendo em 30 dias</li>
+                                <li>✅ Sistema FIFO ativo</li>
+                                <li>✅ Rastreabilidade completa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ações Rápidas -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-lightning"></i> Ações Rápidas
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="{% url 'inventory:stock_entry' %}" class="btn btn-success">
+                        <i class="bi bi-plus-circle"></i> Registrar Entrada
+                    </a>
+                    <a href="{% url 'inventory:stock_exit' %}" class="btn btn-primary">
+                        <i class="bi bi-arrow-right-circle"></i> Registrar Saída
+                    </a>
+                    <a href="{% url 'inventory:patients_list' %}" class="btn btn-info">
+                        <i class="bi bi-people"></i> Gerenciar Pacientes
+                    </a>
+                    <a href="{% url 'inventory:protocols_list' %}" class="btn btn-secondary">
+                        <i class="bi bi-clipboard-check"></i> Ver Protocolos
+                    </a>
+                    <a href="{% url 'inventory:substance_prices' %}" class="btn btn-warning">
+                        <i class="bi bi-currency-dollar"></i> Configurar Preços
+                    </a>
+                    <a href="{% url 'core:alerts' %}" class="btn btn-outline-danger">
+                        <i class="bi bi-exclamation-triangle"></i> Ver Alertas
+                    </a>
+                </div>
+                
+                <hr>
+                
+                <h6 class="text-muted">Estatísticas Rápidas:</h6>
+                <div class="row text-center">
+                    <div class="col-6">
+                        <h5 class="text-primary">{{ total_substances }}</h5>
+                        <small class="text-muted">Substâncias</small>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="text-success">{{ total_stock|floatformat:0 }}</h5>
+                        <small class="text-muted">Unidades</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto-refresh a cada 5 minutos
+    setTimeout(function() {
+        location.reload();
+    }, 300000);
+    
+    console.log('Dashboard carregado - Multi-unidades ativo');
+});
+</script>
+{% endblock %}
+

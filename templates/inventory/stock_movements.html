@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Movimentações de Estoque{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-exchange-alt text-primary me-2"></i>Movimentações de Estoque</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'core:dashboard' %}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Movimentações</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-list me-2"></i>Últimas 100 Movimentações
+                        </h5>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-light btn-sm">
+                                <i class="fas fa-filter me-1"></i>Filtrar
+                            </button>
+                            <button type="button" class="btn btn-light btn-sm">
+                                <i class="fas fa-download me-1"></i>Exportar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Data/Hora</th>
+                                    <th>Tipo</th>
+                                    <th>Substância</th>
+                                    <th>Lote</th>
+                                    <th>Quantidade</th>
+                                    <th>Usuário</th>
+                                    <th>Paciente</th>
+                                    <th>Motivo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for movement in movements %}
+                                <tr>
+                                    <td>
+                                        <small class="text-muted">
+                                            {{ movement.data_hora|date:"d/m/Y H:i" }}
+                                        </small>
+                                    </td>
+                                    <td>
+                                        {% if movement.tipo == 'entrada' %}
+                                            <span class="badge bg-success">
+                                                <i class="fas fa-plus me-1"></i>Entrada
+                                            </span>
+                                        {% elif movement.tipo == 'saida' %}
+                                            <span class="badge bg-danger">
+                                                <i class="fas fa-minus me-1"></i>Saída
+                                            </span>
+                                        {% elif movement.tipo == 'correcao' %}
+                                            <span class="badge bg-warning">
+                                                <i class="fas fa-edit me-1"></i>Correção
+                                            </span>
+                                        {% elif movement.tipo == 'ajuste' %}
+                                            <span class="badge bg-info">
+                                                <i class="fas fa-cog me-1"></i>Ajuste
+                                            </span>
+                                        {% elif movement.tipo == 'perda' %}
+                                            <span class="badge bg-dark">
+                                                <i class="fas fa-trash me-1"></i>Perda
+                                            </span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <strong>{{ movement.substance.nome_comum }}</strong>
+                                        {% if movement.substance.concentracao %}
+                                            <br><small class="text-muted">{{ movement.substance.concentracao }}</small>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <code>{{ movement.batch.lote }}</code>
+                                        <br><small class="text-muted">Val: {{ movement.batch.validade|date:"d/m/Y" }}</small>
+                                    </td>
+                                    <td>
+                                        <strong class="{% if movement.tipo == 'entrada' %}text-success{% elif movement.tipo == 'saida' %}text-danger{% endif %}">
+                                            {% if movement.tipo == 'entrada' %}+{% elif movement.tipo == 'saida' %}-{% endif %}{{ movement.quantidade }}
+                                        </strong>
+                                    </td>
+                                    <td>
+                                        <small>
+                                            {{ movement.user.nome|default:movement.user.username }}
+                                            <br><span class="text-muted">{{ movement.user.get_role_display }}</span>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        {% if movement.paciente_nome %}
+                                            <small>{{ movement.paciente_nome }}</small>
+                                        {% else %}
+                                            <span class="text-muted">-</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <small class="text-muted">
+                                            {{ movement.motivo|truncatechars:50 }}
+                                            {% if movement.procedimento %}
+                                                <br><em>{{ movement.procedimento|truncatechars:30 }}</em>
+                                            {% endif %}
+                                        </small>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="8" class="text-center py-4">
+                                        <div class="text-muted">
+                                            <i class="fas fa-inbox fa-2x mb-2"></i>
+                                            <p>Nenhuma movimentação encontrada</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estatísticas rápidas -->
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h6 class="card-title">Entradas Hoje</h6>
+                            <h3>{{ movements|length }}</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-plus-circle fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h6 class="card-title">Saídas Hoje</h6>
+                            <h3>{{ movements|length }}</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-minus-circle fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h6 class="card-title">Correções</h6>
+                            <h3>0</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-edit fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h6 class="card-title">Total Movimentos</h6>
+                            <h3>{{ movements|length }}</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-exchange-alt fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Adicionar funcionalidade de filtro (placeholder)
+    const filterBtn = document.querySelector('.btn-group .btn:first-child');
+    if (filterBtn) {
+        filterBtn.addEventListener('click', function() {
+            // Implementar filtros futuramente
+            alert('Funcionalidade de filtro será implementada em breve!');
+        });
+    }
+    
+    // Adicionar funcionalidade de exportação (placeholder)
+    const exportBtn = document.querySelector('.btn-group .btn:last-child');
+    if (exportBtn) {
+        exportBtn.addEventListener('click', function() {
+            // Implementar exportação futuramente
+            alert('Funcionalidade de exportação será implementada em breve!');
+        });
+    }
+});
+</script>
+{% endblock %}
+

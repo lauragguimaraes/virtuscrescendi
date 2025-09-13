@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Entrada de Estoque{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-plus-circle text-success me-2"></i>Entrada de Estoque</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'core:dashboard' %}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Entrada</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-box me-2"></i>Registrar Nova Entrada
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" hx-post="{% url 'inventory:stock_entry' %}" hx-target="#messages">
+                        {% csrf_token %}
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.substance.id_for_label }}" class="form-label">
+                                    {{ form.substance.label }} <span class="text-danger">*</span>
+                                </label>
+                                {{ form.substance }}
+                                {% if form.substance.errors %}
+                                    <div class="text-danger small">{{ form.substance.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.lote.id_for_label }}" class="form-label">
+                                    {{ form.lote.label }} <span class="text-danger">*</span>
+                                </label>
+                                {{ form.lote }}
+                                {% if form.lote.errors %}
+                                    <div class="text-danger small">{{ form.lote.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.quantidade.id_for_label }}" class="form-label">
+                                    {{ form.quantidade.label }} <span class="text-danger">*</span>
+                                </label>
+                                {{ form.quantidade }}
+                                {% if form.quantidade.errors %}
+                                    <div class="text-danger small">{{ form.quantidade.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.validade.id_for_label }}" class="form-label">
+                                    {{ form.validade.label }} <span class="text-danger">*</span>
+                                </label>
+                                {{ form.validade }}
+                                {% if form.validade.errors %}
+                                    <div class="text-danger small">{{ form.validade.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.preco_unitario.id_for_label }}" class="form-label">
+                                    {{ form.preco_unitario.label }}
+                                </label>
+                                {{ form.preco_unitario }}
+                                {% if form.preco_unitario.errors %}
+                                    <div class="text-danger small">{{ form.preco_unitario.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.fornecedor.id_for_label }}" class="form-label">
+                                    {{ form.fornecedor.label }} <span class="text-danger">*</span>
+                                </label>
+                                {{ form.fornecedor }}
+                                {% if form.fornecedor.errors %}
+                                    <div class="text-danger small">{{ form.fornecedor.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.nota_fiscal_ref.id_for_label }}" class="form-label">
+                                    {{ form.nota_fiscal_ref.label }}
+                                </label>
+                                {{ form.nota_fiscal_ref }}
+                                {% if form.nota_fiscal_ref.errors %}
+                                    <div class="text-danger small">{{ form.nota_fiscal_ref.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.motivo.id_for_label }}" class="form-label">
+                                {{ form.motivo.label }}
+                            </label>
+                            {{ form.motivo }}
+                            {% if form.motivo.errors %}
+                                <div class="text-danger small">{{ form.motivo.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-save me-2"></i>Registrar Entrada
+                            </button>
+                            <a href="{% url 'core:dashboard' %}" class="btn btn-secondary">
+                                <i class="fas fa-times me-2"></i>Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h6 class="card-title mb-0">
+                        <i class="fas fa-info-circle me-2"></i>Instruções
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <h6><i class="fas fa-lightbulb me-2"></i>Dicas importantes:</h6>
+                        <ul class="mb-0 small">
+                            <li>Verifique se o número do lote não existe</li>
+                            <li>Confirme a data de validade</li>
+                            <li>Registre o fornecedor corretamente</li>
+                            <li>O preço unitário é opcional</li>
+                            <li>Use observações para detalhes extras</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <h6><i class="fas fa-exclamation-triangle me-2"></i>Atenção:</h6>
+                        <p class="mb-0 small">
+                            Esta operação criará um novo lote e registrará a entrada no estoque. 
+                            Certifique-se de que todas as informações estão corretas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mt-3">
+                <div class="card-header bg-secondary text-white">
+                    <h6 class="card-title mb-0">
+                        <i class="fas fa-clock me-2"></i>Últimas Entradas
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div class="small text-muted">
+                        <p>Aqui aparecerão as últimas entradas registradas...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="messages"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto-gerar número do lote baseado na substância
+    const substanceSelect = document.querySelector('#id_substance');
+    const loteInput = document.querySelector('#id_lote');
+    
+    if (substanceSelect && loteInput) {
+        substanceSelect.addEventListener('change', function() {
+            if (this.value && !loteInput.value) {
+                const substanceName = this.options[this.selectedIndex].text;
+                const prefix = substanceName.substring(0, 3).toUpperCase();
+                const date = new Date();
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                
+                loteInput.value = `${prefix}-${year}${month}${day}-001`;
+            }
+        });
+    }
+});
+</script>
+{% endblock %}
+

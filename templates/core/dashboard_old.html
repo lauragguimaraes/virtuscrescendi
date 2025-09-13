@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Farmácia Estoque{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">
+        <i class="bi bi-speedometer2"></i> Dashboard
+    </h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-download"></i> Exportar
+            </button>
+        </div>
+        <button type="button" class="btn btn-sm btn-primary" onclick="location.reload()">
+            <i class="bi bi-arrow-clockwise"></i> Atualizar
+        </button>
+    </div>
+</div>
+
+<!-- Estatísticas Principais -->
+<div class="row mb-4">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card card-stats border-0 shadow-sm">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Total de Substâncias</h5>
+                        <span class="h2 font-weight-bold mb-0">{{ total_substances }}</span>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
+                            <i class="bi bi-capsule" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card card-stats border-0 shadow-sm">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Total de Lotes</h5>
+                        <span class="h2 font-weight-bold mb-0">{{ total_batches }}</span>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                            <i class="bi bi-box" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card card-stats border-0 shadow-sm">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Estoque Total</h5>
+                        <span class="h2 font-weight-bold mb-0">{{ total_stock|floatformat:0 }}</span>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-success text-white rounded-circle shadow">
+                            <i class="bi bi-stack" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card card-stats warning border-0 shadow-sm">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Alertas</h5>
+                        <span class="h2 font-weight-bold mb-0">{{ low_stock_count|add:expired_batches_count }}</span>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                            <i class="bi bi-exclamation-triangle" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alertas Importantes -->
+{% if low_stock_substances or expiring_batches or expired_batches_count > 0 %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card border-warning">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0">
+                    <i class="bi bi-exclamation-triangle"></i> Alertas Importantes
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% if expired_batches_count > 0 %}
+                    <div class="col-md-4">
+                        <div class="alert alert-danger">
+                            <h6><i class="bi bi-x-circle"></i> Lotes Vencidos</h6>
+                            <p class="mb-0">{{ expired_batches_count }} lote{{ expired_batches_count|pluralize }} vencido{{ expired_batches_count|pluralize }}</p>
+                            <a href="{% url 'core:alerts' %}" class="btn btn-sm btn-outline-danger mt-2">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if expiring_batches %}
+                    <div class="col-md-4">
+                        <div class="alert alert-warning">
+                            <h6><i class="bi bi-clock"></i> Vencendo em Breve</h6>
+                            <p class="mb-0">{{ expiring_batches|length }} lote{{ expiring_batches|length|pluralize }} vencendo em 30 dias</p>
+                            <a href="{% url 'core:alerts' %}" class="btn btn-sm btn-outline-warning mt-2">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if low_stock_count > 0 %}
+                    <div class="col-md-4">
+                        <div class="alert alert-info">
+                            <h6><i class="bi bi-arrow-down"></i> Estoque Baixo</h6>
+                            <p class="mb-0">{{ low_stock_count }} substância{{ low_stock_count|pluralize }} com estoque baixo</p>
+                            <a href="{% url 'core:alerts' %}" class="btn btn-sm btn-outline-info mt-2">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Conteúdo Principal -->
+<div class="row">
+    <!-- Movimentações Recentes -->
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-clock-history"></i> Movimentações Recentes
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if recent_movements %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Data/Hora</th>
+                                    <th>Tipo</th>
+                                    <th>Substância</th>
+                                    <th>Quantidade</th>
+                                    <th>Usuário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for movement in recent_movements %}
+                                <tr>
+                                    <td>
+                                        <small>{{ movement.data_hora|date:"d/m/Y H:i" }}</small>
+                                    </td>
+                                    <td>
+                                        {% if movement.tipo == 'entrada' %}
+                                            <span class="badge bg-success">{{ movement.get_tipo_display }}</span>
+                                        {% elif movement.tipo == 'saida' %}
+                                            <span class="badge bg-primary">{{ movement.get_tipo_display }}</span>
+                                        {% else %}
+                                            <span class="badge bg-secondary">{{ movement.get_tipo_display }}</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ movement.substance.nome_comum }}</td>
+                                    <td>{{ movement.quantidade|floatformat:1 }}</td>
+                                    <td>
+                                        <small>{{ movement.user.nome|default:movement.user.username }}</small>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="text-center text-muted py-4">
+                        <i class="bi bi-inbox" style="font-size: 3rem;"></i>
+                        <p class="mt-2">Nenhuma movimentação recente</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Lotes Vencendo -->
+    <div class="col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-calendar-x"></i> Próximos Vencimentos
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if expiring_batches %}
+                    {% for batch in expiring_batches %}
+                    <div class="d-flex justify-content-between align-items-center mb-3 p-2 border rounded">
+                        <div>
+                            <h6 class="mb-1">{{ batch.substance.nome_comum }}</h6>
+                            <small class="text-muted">Lote: {{ batch.lote }}</small><br>
+                            <small class="text-muted">Estoque: {{ batch.inventory.quantity_on_hand|floatformat:1 }}</small>
+                        </div>
+                        <div class="text-end">
+                            <span class="badge bg-warning">{{ batch.validade|date:"d/m/Y" }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="text-center mt-3">
+                        <a href="{% url 'core:alerts' %}" class="btn btn-sm btn-outline-primary">
+                            Ver Todos os Alertas
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="text-center text-muted py-4">
+                        <i class="bi bi-check-circle" style="font-size: 2rem;"></i>
+                        <p class="mt-2">Nenhum lote vencendo em breve</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Estatísticas de Movimentação -->
+{% if movement_stats %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-graph-up"></i> Estatísticas dos Últimos 30 Dias
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% for stat in movement_stats %}
+                    <div class="col-md-3 text-center">
+                        <h4 class="text-primary">{{ stat.count }}</h4>
+                        <p class="text-muted">{{ stat.tipo|capfirst }}{{ stat.count|pluralize }}</p>
+                        <small class="text-muted">{{ stat.total_quantity|floatformat:1 }} unidades</small>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+

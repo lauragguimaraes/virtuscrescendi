@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Farmácia Estoque{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+        }
+        
+        .main-content {
+            min-height: 100vh;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: #0d6efd !important;
+        }
+        
+        .alert-dismissible .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            padding: 1.25rem 1rem;
+        }
+        
+        .card-stats {
+            border-left: 4px solid #0d6efd;
+        }
+        
+        .card-stats.warning {
+            border-left-color: #ffc107;
+        }
+        
+        .card-stats.danger {
+            border-left-color: #dc3545;
+        }
+        
+        .card-stats.success {
+            border-left-color: #198754;
+        }
+        
+        .table-responsive {
+            border-radius: 0.375rem;
+        }
+        
+        .btn-sm {
+            font-size: 0.875rem;
+        }
+        
+        .badge {
+            font-size: 0.75em;
+        }
+        
+        .htmx-indicator {
+            opacity: 0;
+            transition: opacity 500ms ease-in;
+        }
+        
+        .htmx-request .htmx-indicator {
+            opacity: 1;
+        }
+        
+        .htmx-request.htmx-indicator {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                min-height: auto;
+            }
+            
+            .main-content {
+                min-height: auto;
+            }
+        }
+    </style>
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'core:dashboard' %}">
+                <i class="bi bi-capsule"></i> Farmácia Estoque
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'core:dashboard' %}">
+                                <i class="bi bi-house"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'core:alerts' %}">
+                                <i class="bi bi-exclamation-triangle"></i> Alertas
+                            </a>
+                        </li>
+                        {% if user.is_chefe %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-gear"></i> Administração
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/admin/">Django Admin</a></li>
+                                    {% if user.is_admin %}
+                                        <li><a class="dropdown-item" href="{% url 'users:audit_logs' %}">Logs de Auditoria</a></li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                </ul>
+                
+                <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person-circle"></i> {{ user.nome|default:user.username }}
+                                {% if user.is_chefe and not user.two_factor_enabled %}
+                                    <span class="badge bg-warning ms-1">2FA</span>
+                                {% endif %}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="{% url 'users:profile' %}">
+                                    <i class="bi bi-person"></i> Perfil
+                                </a></li>
+                                <li><a class="dropdown-item" href="{% url 'users:change_password' %}">
+                                    <i class="bi bi-key"></i> Alterar Senha
+                                </a></li>
+                                {% if user.is_chefe %}
+                                    <li><a class="dropdown-item" href="{% url 'users:setup_2fa' %}">
+                                        <i class="bi bi-shield-check"></i> Configurar 2FA
+                                    </a></li>
+                                {% endif %}
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'users:logout' %}">
+                                    <i class="bi bi-box-arrow-right"></i> Sair
+                                </a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'users:login' %}">
+                                <i class="bi bi-box-arrow-in-right"></i> Entrar
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            {% if user.is_authenticated %}
+                <!-- Sidebar -->
+                <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" 
+                                   href="{% url 'core:dashboard' %}">
+                                    <i class="bi bi-speedometer2"></i> Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.resolver_match.url_name == 'alerts' %}active{% endif %}" 
+                                   href="{% url 'core:alerts' %}">
+                                    <i class="bi bi-exclamation-triangle"></i> Alertas
+                                </a>
+                            </li>
+                            
+                            <hr>
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span>Estoque</span>
+                            </h6>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="alert('Em desenvolvimento')">
+                                    <i class="bi bi-capsule"></i> Substâncias
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="alert('Em desenvolvimento')">
+                                    <i class="bi bi-box"></i> Lotes
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="alert('Em desenvolvimento')">
+                                    <i class="bi bi-arrow-down-circle"></i> Entrada
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="alert('Em desenvolvimento')">
+                                    <i class="bi bi-arrow-up-circle"></i> Saída
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:transfers_list' %}">
+                                    <i class="bi bi-arrow-left-right"></i> Transferências
+                                </a>
+                            </li>
+                            
+                            <hr>
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span>Pacientes</span>
+                            </h6>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:patients_list' %}">
+                                    <i class="bi bi-people"></i> Pacientes
+                                </a>
+                            </li>
+                            
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span>Protocolos</span>
+                            </h6>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:protocols_list' %}">
+                                    <i class="bi bi-clipboard-check"></i> Protocolos
+                                </a>
+                            </li>
+                            
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span>Financeiro</span>
+                            </h6>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:substance_prices' %}">
+                                    <i class="bi bi-currency-dollar"></i> Preços
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:financial_reports' %}">
+                                    <i class="bi bi-graph-up"></i> Relatórios Financeiros
+                                </a>
+                            </li>
+                            
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span>Relatórios</span>
+                            </h6>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:stock_movements' %}">
+                                    <i class="bi bi-arrow-left-right"></i> Movimentações
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:patients_list' %}">
+                                    <i class="bi bi-people"></i> Por Paciente
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inventory:financial_reports' %}">
+                                    <i class="bi bi-calendar-date"></i> Por Período
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Main content area -->
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+            {% else %}
+                <!-- Full width for login page -->
+                <main class="col-12 main-content">
+            {% endif %}
+                
+                <!-- Messages -->
+                {% if messages %}
+                    <div class="mt-3">
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <!-- Page Content -->
+                {% block content %}{% endblock %}
+                
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- HTMX Extensions -->
+    <script>
+        // Auto-dismiss alerts after 5 seconds
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var alerts = document.querySelectorAll('.alert:not(.alert-danger)');
+                alerts.forEach(function(alert) {
+                    var bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                });
+            }, 5000);
+        });
+        
+        // HTMX configuration
+        htmx.config.globalViewTransitions = true;
+        
+        // Show loading indicator
+        document.body.addEventListener('htmx:beforeRequest', function(evt) {
+            var indicator = document.querySelector('.htmx-indicator');
+            if (indicator) {
+                indicator.style.opacity = '1';
+            }
+        });
+        
+        document.body.addEventListener('htmx:afterRequest', function(evt) {
+            var indicator = document.querySelector('.htmx-indicator');
+            if (indicator) {
+                indicator.style.opacity = '0';
+            }
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+

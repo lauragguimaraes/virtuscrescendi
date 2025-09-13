@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-plus"></i> {{ title }}
+                    </h3>
+                </div>
+                
+                <form method="post" id="transferForm">
+                    {% csrf_token %}
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="unidade_origem" class="form-label">
+                                        <i class="fas fa-arrow-up"></i> Unidade de Origem *
+                                    </label>
+                                    <select name="unidade_origem" id="unidade_origem" class="form-control" required>
+                                        <option value="">Selecione a unidade de origem</option>
+                                        {% for unit in units %}
+                                        <option value="{{ unit.id }}">{{ unit.codigo }} - {{ unit.nome }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="unidade_destino" class="form-label">
+                                        <i class="fas fa-arrow-down"></i> Unidade de Destino *
+                                    </label>
+                                    <select name="unidade_destino" id="unidade_destino" class="form-control" required>
+                                        <option value="">Selecione a unidade de destino</option>
+                                        {% for unit in units %}
+                                        <option value="{{ unit.id }}">{{ unit.codigo }} - {{ unit.nome }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            <label for="observacoes" class="form-label">
+                                <i class="fas fa-comment"></i> Observações
+                            </label>
+                            <textarea name="observacoes" id="observacoes" class="form-control" rows="3" 
+                                      placeholder="Observações sobre a transferência..."></textarea>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5><i class="fas fa-list"></i> Itens da Transferência</h5>
+                            <button type="button" class="btn btn-success" id="addItem">
+                                <i class="fas fa-plus"></i> Adicionar Item
+                            </button>
+                        </div>
+                        
+                        <div id="itemsContainer">
+                            <!-- Items will be added here dynamically -->
+                        </div>
+                        
+                        <div id="noItems" class="text-center py-4 text-muted">
+                            <i class="fas fa-box-open fa-2x mb-2"></i>
+                            <p>Nenhum item adicionado. Clique em "Adicionar Item" para começar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'transfers_list' %}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Voltar
+                            </a>
+                            <button type="submit" class="btn btn-primary" id="submitBtn" disabled>
+                                <i class="fas fa-save"></i> Criar Transferência
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let itemCount = 0;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const addItemBtn = document.getElementById('addItem');
+    const itemsContainer = document.getElementById('itemsContainer');
+    const noItems = document.getElementById('noItems');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    addItemBtn.addEventListener('click', addItem);
+    
+    function addItem() {
+        itemCount++;
+        
+        const itemHtml = `
+            <div class="item-row border rounded p-3 mb-3" data-item="${itemCount}">
+                <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-label">Substância *</label>
+                        <select name="substance[]" class="form-control substance-select" required>
+                            <option value="">Selecione a substância</option>
+                            {% for substance in substances %}
+                            <option value="{{ substance.id }}">{{ substance.nome_comum }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Quantidade *</label>
+                        <input type="number" name="quantity[]" class="form-control quantity-input" 
+                               min="0.01" step="0.01" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Estoque Disponível</label>
+                        <input type="text" class="form-control stock-display" readonly 
+                               placeholder="Selecione origem e substância">
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-label">&nbsp;</label>
+                        <button type="button" class="btn btn-danger btn-sm d-block remove-item">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        itemsContainer.insertAdjacentHTML('beforeend', itemHtml);
+        noItems.style.display = 'none';
+        updateSubmitButton();
+        
+        // Add event listeners to new item
+        const newItem = itemsContainer.lastElementChild;
+        const removeBtn = newItem.querySelector('.remove-item');
+        const substanceSelect = newItem.querySelector('.substance-select');
+        
+        removeBtn.addEventListener('click', function() {
+            newItem.remove();
+            updateSubmitButton();
+            if (itemsContainer.children.length === 0) {
+                noItems.style.display = 'block';
+            }
+        });
+        
+        substanceSelect.addEventListener('change', function() {
+            updateStock(newItem);
+        });
+    }
+    
+    function updateStock(itemRow) {
+        const unidadeOrigem = document.getElementById('unidade_origem').value;
+        const substance = itemRow.querySelector('.substance-select').value;
+        const stockDisplay = itemRow.querySelector('.stock-display');
+        
+        if (unidadeOrigem && substance) {
+            fetch(`/inventory/api/substance-stock/?unit_id=${unidadeOrigem}&substance_id=${substance}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        stockDisplay.value = 'Erro';
+                    } else {
+                        stockDisplay.value = data.stock + ' unidades';
+                        itemRow.querySelector('.quantity-input').max = data.stock;
+                    }
+                })
+                .catch(error => {
+                    stockDisplay.value = 'Erro ao carregar';
+                });
+        } else {
+            stockDisplay.value = '';
+        }
+    }
+    
+    function updateSubmitButton() {
+        const hasItems = itemsContainer.children.length > 0;
+        submitBtn.disabled = !hasItems;
+    }
+    
+    // Update stock when origin unit changes
+    document.getElementById('unidade_origem').addEventListener('change', function() {
+        const items = itemsContainer.querySelectorAll('.item-row');
+        items.forEach(updateStock);
+    });
+});
+</script>
+{% endblock %}
+

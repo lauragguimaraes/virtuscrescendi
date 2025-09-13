@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Editar Paciente{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-user-edit"></i> Editar Paciente</h2>
+                <a href="{% url 'inventory:patients_list' %}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Dados do Paciente</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" id="editPatientForm">
+                                {% csrf_token %}
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="codigo" class="form-label">Código do Paciente</label>
+                                            <input type="text" class="form-control" id="codigo" name="codigo" 
+                                                   value="{{ patient.codigo }}" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="unidade_principal" class="form-label">Unidade Principal</label>
+                                            <select class="form-select" id="unidade_principal" name="unidade_principal" required>
+                                                {% for unit in units %}
+                                                <option value="{{ unit.id }}" {% if patient.unidade_principal.id == unit.id %}selected{% endif %}>
+                                                    {{ unit.nome }}
+                                                </option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome Completo</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" 
+                                           value="{{ patient.nome }}" required>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="data_nascimento" class="form-label">Data de Nascimento</label>
+                                            <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" 
+                                                   value="{{ patient.data_nascimento|date:'Y-m-d' }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="telefone" class="form-label">Telefone</label>
+                                            <input type="text" class="form-control" id="telefone" name="telefone" 
+                                                   value="{{ patient.telefone }}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email" 
+                                           value="{{ patient.email }}">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="observacoes" class="form-label">Observações</label>
+                                    <textarea class="form-control" id="observacoes" name="observacoes" rows="3">{{ patient.observacoes }}</textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="ativo" name="ativo" 
+                                               {% if patient.ativo %}checked{% endif %}>
+                                        <label class="form-check-label" for="ativo">
+                                            Paciente Ativo
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save"></i> Salvar Alterações
+                                    </button>
+                                    <a href="{% url 'inventory:patients_list' %}" class="btn btn-secondary">
+                                        <i class="fas fa-times"></i> Cancelar
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Informações do Sistema</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Criado em:</strong><br>{{ patient.created_at|date:'d/m/Y H:i' }}</p>
+                            <p><strong>Última atualização:</strong><br>{{ patient.updated_at|date:'d/m/Y H:i' }}</p>
+                            {% if patient.created_by %}
+                            <p><strong>Criado por:</strong><br>{{ patient.created_by.username }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h5 class="mb-0">Estatísticas</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Total de Sessões:</strong> {{ patient.total_sessions|default:0 }}</p>
+                            <p><strong>Última Sessão:</strong> 
+                                {% if patient.last_session_date %}
+                                    {{ patient.last_session_date|date:'d/m/Y' }}
+                                {% else %}
+                                    Nenhuma sessão
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('editPatientForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validação básica
+    const nome = document.getElementById('nome').value.trim();
+    const codigo = document.getElementById('codigo').value.trim();
+    
+    if (!nome || !codigo) {
+        alert('Nome e código são obrigatórios!');
+        return;
+    }
+    
+    // Confirmar alterações
+    if (confirm('Deseja salvar as alterações no paciente?')) {
+        this.submit();
+    }
+});
+</script>
+{% endblock %}
+

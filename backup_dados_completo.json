@@ -1,0 +1,4892 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Lote",
+    "content_type": 6,
+    "codename": "add_batch"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Lote",
+    "content_type": 6,
+    "codename": "change_batch"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Lote",
+    "content_type": 6,
+    "codename": "delete_batch"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Lote",
+    "content_type": 6,
+    "codename": "view_batch"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Paciente",
+    "content_type": 7,
+    "codename": "add_patient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Paciente",
+    "content_type": 7,
+    "codename": "change_patient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Paciente",
+    "content_type": 7,
+    "codename": "delete_patient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Paciente",
+    "content_type": 7,
+    "codename": "view_patient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Substância",
+    "content_type": 8,
+    "codename": "add_substance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Substância",
+    "content_type": 8,
+    "codename": "change_substance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Substância",
+    "content_type": 8,
+    "codename": "delete_substance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Substância",
+    "content_type": 8,
+    "codename": "view_substance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Unidade",
+    "content_type": 9,
+    "codename": "add_unit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Unidade",
+    "content_type": 9,
+    "codename": "change_unit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Unidade",
+    "content_type": 9,
+    "codename": "delete_unit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Unidade",
+    "content_type": 9,
+    "codename": "view_unit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Transferência entre Unidades",
+    "content_type": 10,
+    "codename": "add_unittransfer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Transferência entre Unidades",
+    "content_type": 10,
+    "codename": "change_unittransfer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Transferência entre Unidades",
+    "content_type": 10,
+    "codename": "delete_unittransfer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Transferência entre Unidades",
+    "content_type": 10,
+    "codename": "view_unittransfer"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Movimentação",
+    "content_type": 11,
+    "codename": "add_stockmovement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Movimentação",
+    "content_type": 11,
+    "codename": "change_stockmovement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Movimentação",
+    "content_type": 11,
+    "codename": "delete_stockmovement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Movimentação",
+    "content_type": 11,
+    "codename": "view_stockmovement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Configuração por Unidade",
+    "content_type": 12,
+    "codename": "add_substanceunitconfig"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Configuração por Unidade",
+    "content_type": 12,
+    "codename": "change_substanceunitconfig"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Configuração por Unidade",
+    "content_type": 12,
+    "codename": "delete_substanceunitconfig"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Configuração por Unidade",
+    "content_type": 12,
+    "codename": "view_substanceunitconfig"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Estoque",
+    "content_type": 13,
+    "codename": "add_inventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Estoque",
+    "content_type": 13,
+    "codename": "change_inventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Estoque",
+    "content_type": 13,
+    "codename": "delete_inventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Estoque",
+    "content_type": 13,
+    "codename": "view_inventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Usuário",
+    "content_type": 14,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Usuário",
+    "content_type": 14,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Usuário",
+    "content_type": 14,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Usuário",
+    "content_type": 14,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add Log de Auditoria",
+    "content_type": 15,
+    "codename": "add_auditlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change Log de Auditoria",
+    "content_type": 15,
+    "codename": "change_auditlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete Log de Auditoria",
+    "content_type": 15,
+    "codename": "delete_auditlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view Log de Auditoria",
+    "content_type": 15,
+    "codename": "view_auditlog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add Sessão do Paciente",
+    "content_type": 16,
+    "codename": "add_patientsession"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change Sessão do Paciente",
+    "content_type": 16,
+    "codename": "change_patientsession"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete Sessão do Paciente",
+    "content_type": 16,
+    "codename": "delete_patientsession"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view Sessão do Paciente",
+    "content_type": 16,
+    "codename": "view_patientsession"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add Template de Protocolo",
+    "content_type": 17,
+    "codename": "add_protocoltemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change Template de Protocolo",
+    "content_type": 17,
+    "codename": "change_protocoltemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete Template de Protocolo",
+    "content_type": 17,
+    "codename": "delete_protocoltemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view Template de Protocolo",
+    "content_type": 17,
+    "codename": "view_protocoltemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add Substância da Sessão",
+    "content_type": 18,
+    "codename": "add_sessionsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change Substância da Sessão",
+    "content_type": 18,
+    "codename": "change_sessionsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete Substância da Sessão",
+    "content_type": 18,
+    "codename": "delete_sessionsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view Substância da Sessão",
+    "content_type": 18,
+    "codename": "view_sessionsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Substância do Protocolo",
+    "content_type": 19,
+    "codename": "add_protocolsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Substância do Protocolo",
+    "content_type": 19,
+    "codename": "change_protocolsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Substância do Protocolo",
+    "content_type": 19,
+    "codename": "delete_protocolsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Substância do Protocolo",
+    "content_type": 19,
+    "codename": "view_protocolsubstance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add Item de Transferência Nova",
+    "content_type": 20,
+    "codename": "add_transferitemnew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change Item de Transferência Nova",
+    "content_type": 20,
+    "codename": "change_transferitemnew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete Item de Transferência Nova",
+    "content_type": 20,
+    "codename": "delete_transferitemnew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view Item de Transferência Nova",
+    "content_type": 20,
+    "codename": "view_transferitemnew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add Transferência Nova",
+    "content_type": 21,
+    "codename": "add_transfernew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change Transferência Nova",
+    "content_type": 21,
+    "codename": "change_transfernew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete Transferência Nova",
+    "content_type": 21,
+    "codename": "delete_transfernew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view Transferência Nova",
+    "content_type": 21,
+    "codename": "view_transfernew"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add Termo de Responsabilidade",
+    "content_type": 22,
+    "codename": "add_responsibilityterm"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change Termo de Responsabilidade",
+    "content_type": 22,
+    "codename": "change_responsibilityterm"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete Termo de Responsabilidade",
+    "content_type": 22,
+    "codename": "delete_responsibilityterm"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view Termo de Responsabilidade",
+    "content_type": 22,
+    "codename": "view_responsibilityterm"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add Médico Responsável",
+    "content_type": 23,
+    "codename": "add_responsibledoctor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change Médico Responsável",
+    "content_type": 23,
+    "codename": "change_responsibledoctor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete Médico Responsável",
+    "content_type": 23,
+    "codename": "delete_responsibledoctor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view Médico Responsável",
+    "content_type": 23,
+    "codename": "view_responsibledoctor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add Template de Termo",
+    "content_type": 24,
+    "codename": "add_termtemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change Template de Termo",
+    "content_type": 24,
+    "codename": "change_termtemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete Template de Termo",
+    "content_type": 24,
+    "codename": "delete_termtemplate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view Template de Termo",
+    "content_type": 24,
+    "codename": "view_termtemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "inventory",
+    "model": "batch"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "inventory",
+    "model": "patient"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "inventory",
+    "model": "substance"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "inventory",
+    "model": "unit"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "inventory",
+    "model": "unittransfer"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "inventory",
+    "model": "stockmovement"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "inventory",
+    "model": "substanceunitconfig"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "inventory",
+    "model": "inventory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "users",
+    "model": "auditlog"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "inventory",
+    "model": "patientsession"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "inventory",
+    "model": "protocoltemplate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "inventory",
+    "model": "sessionsubstance"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "inventory",
+    "model": "protocolsubstance"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "inventory",
+    "model": "transferitemnew"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "inventory",
+    "model": "transfernew"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "inventory",
+    "model": "responsibilityterm"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "inventory",
+    "model": "responsibledoctor"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "inventory",
+    "model": "termtemplate"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0d5ak20zil366dngxd2gibmpsozltomy",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urgOQ:IHMieek7WyIorsK31e1iu_zVDpqglItOl3Zs7aceHdY",
+    "expire_date": "2025-08-29T01:26:34.761Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0vsmsyus97r4b1ho68ztdhzo7j8kbn3x",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urg32:4RgZPTU5moXXh-9FUN8K7x8AAfE9FHf_iWNXUILqqWU",
+    "expire_date": "2025-08-29T01:04:28.462Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1coqrl2d6l9rkrooq5ctkwbubl59c8cp",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1uxGEe:LtHyYg6HgTHPFIQctpTU8t2kHg0_LbUi4CDeKOumKMU",
+    "expire_date": "2025-09-13T10:43:32.621Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5r6z1i2ydcuvliao5ccm1deormq81xf2",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1uxFza:HJAb1EEGUiBcv6BWWqRYGHtu_7jMJZec4VJrU88BWts",
+    "expire_date": "2025-09-13T10:27:58.596Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7e3eow3mxkygx1t5fqdqkh70l6tc9sy0",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urzsA:nl5b4aj7SYkjN9NDSyPT11w76K-1XVTCve8Ti7Yga7Y",
+    "expire_date": "2025-08-29T22:14:34.884Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "805qfkn4msw0gf21s159rh491st2ky56",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urewV:kcvWDMODYJj6KoMyGI08Y_018kdf_zSjxJ8hKU43wMI",
+    "expire_date": "2025-08-28T23:53:39.706Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "90soab8zohe5tzt51c165a0lpup8e02n",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urefK:7BDtHeJFj4c4xBXXsItZ-vi3m96Yb-mDllo9nioQnwo",
+    "expire_date": "2025-08-28T23:35:54.595Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b8d8mex3slx18an5fyet1jxevd1x5q9g",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urfiZ:HlUz4eRIG2RR4gKFx212KXMBJ0CQac5s7Ym6tJST_4k",
+    "expire_date": "2025-08-29T00:43:19.441Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c7pf47fux97c1ek4xh02mo5fjj30nesq",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1usBb5:3NXVkuoJpY_nA34azcXdg4NmhCSdNXL4s3MstJjKlak",
+    "expire_date": "2025-08-30T10:45:43.501Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cisxxp6uf6wvfrptvgs6dp6dpah131ap",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1uxG1h:znQwaCRHJACo5C4tZ9rQqgPuFZolrCEmq1fVYPsXpIo",
+    "expire_date": "2025-09-13T10:30:09.142Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dc7x84v9tq8k1gkhnzv6c1ggh787ccix",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1ur0al:dHvlcke52SYo6MJmyweowjLELKh9XBrT1ZGqONWe2RQ",
+    "expire_date": "2025-08-27T04:48:31.352Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hw2us876uvudta2uz45dd9wak9tfxqdf",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urgOv:FuDIM-DrEyoLELiL35OHIVQC_9eLTiM6-wnHZMGZ5gc",
+    "expire_date": "2025-08-29T01:27:05.969Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hxwljrlpyzj1v6x7fweeevlw945f1vml",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urgNe:lu3q7yyYVTxFmHpm0boIY7Zti4rvMQ_pt1o6aYEMsJ0",
+    "expire_date": "2025-08-29T01:25:46.582Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kgv1m686cc9v1wzp1kvzaqxsl3gs6ogg",
+  "fields": {
+    "session_data": ".eJxVjEsOwjAMBe-SNYoS2U4IS_acIXJihxZQK_Wzqrg7VOoCtm9m3mYyr0uX11mn3Iu5GDCn361wfeqwA3nwcB9tHYdl6ovdFXvQ2d5G0df1cP8OOp67b82JnQKdEaOLigkIvBPyEhICapLgGoBr4n0kCKTItcRGrCVQQW_eH7a4NxA:1uxGFI:nloBQSj8zegfd7AZa-WzpEV8oh8RnaTg6MoOsTK1L9s",
+    "expire_date": "2025-09-13T10:44:12.648Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kqm1cnjnjbjr57le4y1hx4iugvcoamdm",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1ur1cR:_BxD9bi2jluu1-JYJ0ddffdmXtLp_ECoG6A3cfC5hMU",
+    "expire_date": "2025-08-27T05:54:19.553Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qgitggvavzq0j4muko6hctks5y1iie7t",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urfTH:ivp8wBKFnQMlH1cmwRhqfleb2L4omg5FLJpLTcQ1PVI",
+    "expire_date": "2025-08-29T00:27:31.291Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qsg80852rwq2l0rzrpg5m6by0lysfj0v",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1uxFzA:gFYqecWvzqsMl7qhajH4ZMMvfqpdsgCrRMIRb96nxFQ",
+    "expire_date": "2025-09-13T10:27:32.688Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s0h8zgelh2armky2zkaj14zfxfaijvub",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1urfhb:2Gx95_3J4kjbHZagypDz6HQXEIfUI7nlWB1H-O9zgkU",
+    "expire_date": "2025-08-29T00:42:19.639Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w6gxcd619g8eljr72e6n4bzb1khsniwu",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1uxG4c:49AWfRzQqRe07pXHWSNRJdf3P3sbKdnMytrnbgW-y8U",
+    "expire_date": "2025-09-13T10:33:10.974Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wfx4hui7qvx0q8p79nz7uvv2r66g9mfs",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1uxG6k:wYtV_L3z3hCtiP0RCxuVPYDYGsGZxuXjmxQIGiy9Dls",
+    "expire_date": "2025-09-13T10:35:22.374Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y20dbcsfr4249gkt0qdgjby37cmkn296",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8ChaX7vsNZAZmpGogKe3K-O_apAvd3nPOfYkI21ri1mmJcxYXocXpd0NID6o7yHeotyZTq-syo9wVedAup5bpeT3cv4MCvXzr4DK4EMg4y4qtUsETWIeDxzOBSnlw4-iZSBvlwQRCBSYxe0TKOrF4fwDkyTi-:1ur2P6:W0F7fitqiB3CpVDhh5B3DVFKRzGAPLw1b0g9v2hts9I",
+    "expire_date": "2025-08-27T06:44:36.221Z"
+  }
+},
+{
+  "model": "inventory.unit",
+  "pk": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+  "fields": {
+    "nome": "Bauru",
+    "codigo": "BR",
+    "endereco": "Bauru - SP",
+    "telefone": "(14) 9999-9999",
+    "email": "bauru@clinica.com",
+    "responsavel": "Equipe Bauru",
+    "ativo": true,
+    "created_at": "2025-08-26T20:47:48.284Z",
+    "updated_at": "2025-08-26T20:47:48.284Z"
+  }
+},
+{
+  "model": "inventory.unit",
+  "pk": "fce0048e-3366-4689-a164-c93876ea3020",
+  "fields": {
+    "nome": "Ribeirão Preto",
+    "codigo": "RP",
+    "endereco": "Ribeirão Preto - SP",
+    "telefone": "(16) 9999-9999",
+    "email": "rp@clinica.com",
+    "responsavel": "Dr. Antonio Marcos",
+    "ativo": true,
+    "created_at": "2025-08-26T20:47:48.282Z",
+    "updated_at": "2025-08-26T20:47:48.283Z"
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+  "fields": {
+    "nome_comum": "Carnitina",
+    "nome_comercial": "",
+    "concentracao": "1g/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "10.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.299Z",
+    "updated_at": "2025-08-26T20:47:48.299Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "15f0699b-fc07-4adb-9db3-dbd75ee3850d",
+  "fields": {
+    "nome_comum": "Pool de minerais",
+    "nome_comercial": "",
+    "concentracao": "Mix minerais",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "4.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.310Z",
+    "updated_at": "2025-08-26T20:47:48.310Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+  "fields": {
+    "nome_comum": "Cafeína",
+    "nome_comercial": "",
+    "concentracao": "50mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "5.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.291Z",
+    "updated_at": "2025-08-26T20:47:48.291Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "3a68165b-ea6f-4fa3-be58-1895d8a0a35c",
+  "fields": {
+    "nome_comum": "Vitamina K",
+    "nome_comercial": "",
+    "concentracao": "10mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "2.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.315Z",
+    "updated_at": "2025-08-26T20:47:48.315Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+  "fields": {
+    "nome_comum": "Ácido Alfa lipoico",
+    "nome_comercial": "",
+    "concentracao": "100mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "2.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.287Z",
+    "updated_at": "2025-08-26T20:47:48.287Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "54827a88-bf43-485a-85d9-9dad7b76da5b",
+  "fields": {
+    "nome_comum": "Piracetan",
+    "nome_comercial": "",
+    "concentracao": "200mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "3.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.309Z",
+    "updated_at": "2025-08-26T20:47:48.309Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+  "fields": {
+    "nome_comum": "Glicina",
+    "nome_comercial": "",
+    "concentracao": "500mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "4.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.300Z",
+    "updated_at": "2025-08-26T20:47:48.300Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "58329fd7-c81e-4744-8688-3e26c4f06e60",
+  "fields": {
+    "nome_comum": "Vitamina B3",
+    "nome_comercial": "",
+    "concentracao": "100mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "5.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.316Z",
+    "updated_at": "2025-08-26T20:47:48.316Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "64a18439-8267-483d-928c-0db93a09e0f7",
+  "fields": {
+    "nome_comum": "HMB",
+    "nome_comercial": "",
+    "concentracao": "500mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "6.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.297Z",
+    "updated_at": "2025-08-26T20:47:48.297Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+  "fields": {
+    "nome_comum": "Curcumina",
+    "nome_comercial": "",
+    "concentracao": "100mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "8.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.295Z",
+    "updated_at": "2025-08-26T20:47:48.295Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+  "fields": {
+    "nome_comum": "PQQ",
+    "nome_comercial": "",
+    "concentracao": "20mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "5.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.307Z",
+    "updated_at": "2025-08-26T20:47:48.307Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "7002f90a-2037-4744-81fe-f56e37c094f4",
+  "fields": {
+    "nome_comum": "Vitamina C",
+    "nome_comercial": "",
+    "concentracao": "500mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "8.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.314Z",
+    "updated_at": "2025-08-26T20:47:48.314Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "7082b800-2537-4df8-ba02-738f236faa34",
+  "fields": {
+    "nome_comum": "Coenzima Q10",
+    "nome_comercial": "",
+    "concentracao": "30mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "15.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.294Z",
+    "updated_at": "2025-08-26T20:47:48.294Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+  "fields": {
+    "nome_comum": "Metilcobalamina",
+    "nome_comercial": "",
+    "concentracao": "1mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "9.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.305Z",
+    "updated_at": "2025-08-26T20:47:48.305Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "7e507dd1-43b2-4413-92e7-33d0ca052b60",
+  "fields": {
+    "nome_comum": "Vitamina B6",
+    "nome_comercial": "",
+    "concentracao": "100mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "5.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.317Z",
+    "updated_at": "2025-08-26T20:47:48.317Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "8585674f-ec3b-40cb-9dc5-11145eaac989",
+  "fields": {
+    "nome_comum": "Eritropoetina geladeira",
+    "nome_comercial": "",
+    "concentracao": "4000UI/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "3.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.320Z",
+    "updated_at": "2025-08-26T20:47:48.320Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "8db01c23-fec0-46d1-8d25-75d36052577b",
+  "fields": {
+    "nome_comum": "Complexo B",
+    "nome_comercial": "",
+    "concentracao": "Mix vitaminas",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "10.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.293Z",
+    "updated_at": "2025-08-26T20:47:48.293Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "a04f905c-2cc4-4ce1-93d4-4f64996740df",
+  "fields": {
+    "nome_comum": "Eritropoetina",
+    "nome_comercial": "",
+    "concentracao": "4000UI/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "3.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.319Z",
+    "updated_at": "2025-08-26T20:47:48.319Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+  "fields": {
+    "nome_comum": "Magnésio",
+    "nome_comercial": "",
+    "concentracao": "100mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "7.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.302Z",
+    "updated_at": "2025-08-26T20:47:48.302Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "ab74613a-0238-4bc2-ab02-04f13eaac2c6",
+  "fields": {
+    "nome_comum": "Ferropurum",
+    "nome_comercial": "",
+    "concentracao": "50mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "8.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.322Z",
+    "updated_at": "2025-08-26T20:47:48.322Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "bb903f27-ee1b-46cd-b0ff-cf5be2492a73",
+  "fields": {
+    "nome_comum": "Diprospan",
+    "nome_comercial": "",
+    "concentracao": "7mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "10.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.324Z",
+    "updated_at": "2025-08-26T20:47:48.324Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "c39313f0-d0f9-4953-987d-a71dda55aa5b",
+  "fields": {
+    "nome_comum": "Beta alanina",
+    "nome_comercial": "",
+    "concentracao": "500mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "3.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.290Z",
+    "updated_at": "2025-08-26T20:47:48.290Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+  "fields": {
+    "nome_comum": "Metilfolato",
+    "nome_comercial": "",
+    "concentracao": "5mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "8.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.303Z",
+    "updated_at": "2025-08-26T20:47:48.303Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+  "fields": {
+    "nome_comum": "Vitamina D 600",
+    "nome_comercial": "",
+    "concentracao": "600.000UI/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "2.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.312Z",
+    "updated_at": "2025-08-26T20:47:48.312Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+  "fields": {
+    "nome_comum": "Gluthathion",
+    "nome_comercial": "",
+    "concentracao": "600mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "12.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.296Z",
+    "updated_at": "2025-08-26T20:47:48.296Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+  "fields": {
+    "nome_comum": "Acetilcisteina",
+    "nome_comercial": "",
+    "concentracao": "300mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "5.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.289Z",
+    "updated_at": "2025-08-26T20:47:48.289Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "eb9e256b-bf5b-4a97-b492-a17d6f3cc5b3",
+  "fields": {
+    "nome_comum": "Noripurum",
+    "nome_comercial": "",
+    "concentracao": "100mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "5.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.321Z",
+    "updated_at": "2025-08-26T20:47:48.321Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "ebc0eac3-8196-425e-8aec-a4d1b0537c62",
+  "fields": {
+    "nome_comum": "Metionina",
+    "nome_comercial": "",
+    "concentracao": "250mg/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "6.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.306Z",
+    "updated_at": "2025-08-26T20:47:48.306Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.substance",
+  "pk": "f4a2ddfb-45e3-48dd-add3-8d8882832244",
+  "fields": {
+    "nome_comum": "Vitamina D 100",
+    "nome_comercial": "",
+    "concentracao": "100.000UI/ml",
+    "apresentacao": "Ampola",
+    "unidade": "ampola",
+    "observacoes": "",
+    "estoque_minimo_default": "2.00",
+    "preco_padrao": "0.00",
+    "dias_alerta_vencimento": 90,
+    "created_at": "2025-08-26T20:47:48.311Z",
+    "updated_at": "2025-08-26T20:47:48.311Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "08a3d649-a6da-493f-9cb8-805e454f5f10",
+  "fields": {
+    "codigo": "PAC007",
+    "nome": "Nelma",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Primeira sessão",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-09-11T00:04:52.425Z",
+    "updated_at": "2025-09-11T00:04:52.425Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "1124fe92-c669-44dd-a00f-42d52c635b1c",
+  "fields": {
+    "codigo": "PAC005",
+    "nome": "Andreia",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Suplente do curso - 3ª sessão",
+    "ativo": true,
+    "unidade_principal": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "created_at": "2025-08-28T15:49:57.181Z",
+    "updated_at": "2025-08-28T15:49:57.181Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "2d4f5646-4a04-45a3-bd9f-6380d78bf803",
+  "fields": {
+    "codigo": "PAC006",
+    "nome": "Vera Lucia",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Paciente regular",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-09-11T00:04:52.423Z",
+    "updated_at": "2025-09-11T00:04:52.423Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "4741021a-9c03-4a49-b2c4-48550d3c0133",
+  "fields": {
+    "codigo": "PAC002",
+    "nome": "Rita (curso)",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Paciente do curso",
+    "ativo": true,
+    "unidade_principal": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "created_at": "2025-08-26T20:47:48.513Z",
+    "updated_at": "2025-08-28T17:28:01.665Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "4ce7024d-bf27-4f79-be3b-8ff22b3dc339",
+  "fields": {
+    "codigo": "PAC008",
+    "nome": "Paloma",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Tratamento com ferro",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-09-11T00:04:52.426Z",
+    "updated_at": "2025-09-11T00:04:52.426Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "4f7a996d-e3dc-4c6f-b1db-2da50428cb8e",
+  "fields": {
+    "codigo": "PAC009",
+    "nome": "Regina Comini",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Paciente experiente - 11 sessões",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-09-11T00:04:52.428Z",
+    "updated_at": "2025-09-11T00:04:52.428Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "8920e2da-263e-4694-ac71-3a4fbf116ec1",
+  "fields": {
+    "codigo": "PAC013",
+    "nome": "Andreia Pozza",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Suplente do curso",
+    "ativo": true,
+    "unidade_principal": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "created_at": "2025-09-11T00:04:52.433Z",
+    "updated_at": "2025-09-11T00:04:52.433Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "8d9538ac-dc9a-4b3f-8132-a387a34bce7d",
+  "fields": {
+    "codigo": "PAC001",
+    "nome": "Dr. Antonio",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Médico da clínica",
+    "ativo": true,
+    "unidade_principal": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "created_at": "2025-08-26T20:47:48.511Z",
+    "updated_at": "2025-08-30T02:47:46.868Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "8fdc04ce-60e5-47fd-b42d-7af202945700",
+  "fields": {
+    "codigo": "PAC012",
+    "nome": "Tatiane",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Primeira sessão",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-09-11T00:04:52.432Z",
+    "updated_at": "2025-09-11T00:04:52.432Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "bf387552-668a-4bfc-bd1e-89aafb91ee28",
+  "fields": {
+    "codigo": "PAC011",
+    "nome": "Claudi Gricio",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Primeira sessão",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-09-11T00:04:52.430Z",
+    "updated_at": "2025-09-11T00:04:52.430Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "c5e5c391-4bb3-4e9d-b10c-e1feb12d9921",
+  "fields": {
+    "codigo": "PAC003",
+    "nome": "Beatriz Mendes",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Paciente regular",
+    "ativo": true,
+    "unidade_principal": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "created_at": "2025-08-26T20:47:48.514Z",
+    "updated_at": "2025-08-28T16:55:48.330Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+  "fields": {
+    "codigo": "PAC004",
+    "nome": "Isleila",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Paciente - 3ª sessão",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-08-28T15:49:57.179Z",
+    "updated_at": "2025-08-28T15:49:57.179Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.patient",
+  "pk": "f4f01d55-05a1-4388-9519-91b1a01e1e02",
+  "fields": {
+    "codigo": "PAC010",
+    "nome": "Zenilda",
+    "data_nascimento": null,
+    "telefone": "",
+    "email": "",
+    "observacoes": "Primeira sessão",
+    "ativo": true,
+    "unidade_principal": "fce0048e-3366-4689-a164-c93876ea3020",
+    "created_at": "2025-09-11T00:04:52.429Z",
+    "updated_at": "2025-09-11T00:04:52.429Z",
+    "created_by": null
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "023fca04-486b-42e6-9536-fe8f7362edd3",
+  "fields": {
+    "substance": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-CAF-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "5.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.426Z",
+    "updated_at": "2025-09-11T00:06:44.965Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "0b976b9f-f02b-4141-b70a-5099e7118e90",
+  "fields": {
+    "substance": "bb903f27-ee1b-46cd-b0ff-cf5be2492a73",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-DIP-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "50.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-bb903f27-ee1b-46cd-b0ff-cf5be2492a73",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.410Z",
+    "updated_at": "2025-09-11T00:06:44.955Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "0eade8b6-c7be-4e2a-805a-641e356d18d9",
+  "fields": {
+    "substance": "eb9e256b-bf5b-4a97-b492-a17d6f3cc5b3",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-NOR-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "3.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-eb9e256b-bf5b-4a97-b492-a17d6f3cc5b3",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.501Z",
+    "updated_at": "2025-09-11T00:06:45.014Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "11ef9c9a-a8ef-4537-9c33-eed68d6924f9",
+  "fields": {
+    "substance": "427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-ÁCI-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "28.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.413Z",
+    "updated_at": "2025-09-11T00:06:44.958Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "1372bc35-54b6-446a-8e41-8c5abcbd6d35",
+  "fields": {
+    "substance": "c39313f0-d0f9-4953-987d-a71dda55aa5b",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-BET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "3.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-c39313f0-d0f9-4953-987d-a71dda55aa5b",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.335Z",
+    "updated_at": "2025-09-11T00:06:44.899Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "13e4ee12-0315-4c37-99cf-7b60a1cd9e89",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-ACE-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "16.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.331Z",
+    "updated_at": "2025-09-11T00:06:44.896Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "23e98f34-a7c9-478e-b390-32d7aa14fed9",
+  "fields": {
+    "substance": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "9.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.481Z",
+    "updated_at": "2025-08-26T20:47:48.481Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "2a313fdf-a2b8-411f-9678-1120cc286a49",
+  "fields": {
+    "substance": "58329fd7-c81e-4744-8688-3e26c4f06e60",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "10.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-58329fd7-c81e-4744-8688-3e26c4f06e60",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.488Z",
+    "updated_at": "2025-09-11T00:06:45.007Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "2a345f4d-8196-4516-b884-d347851f9b40",
+  "fields": {
+    "substance": "d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-GLU-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "25.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.439Z",
+    "updated_at": "2025-09-11T00:06:44.974Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "2d8498ba-e584-4138-b516-cf5216459eac",
+  "fields": {
+    "substance": "ab74613a-0238-4bc2-ab02-04f13eaac2c6",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-FER-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "35.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-ab74613a-0238-4bc2-ab02-04f13eaac2c6",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.407Z",
+    "updated_at": "2025-09-11T00:06:44.953Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "2e38ab42-3cfa-49cb-9940-7fcb0df831d3",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-MET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "18.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.461Z",
+    "updated_at": "2025-09-11T00:06:44.988Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "317fa25b-0a1c-43a8-8608-daa20b65159f",
+  "fields": {
+    "substance": "d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-GLU-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "16.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.353Z",
+    "updated_at": "2025-09-11T00:06:44.910Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "356e5120-c12b-4c28-97a8-fe431e28dd23",
+  "fields": {
+    "substance": "7e507dd1-43b2-4413-92e7-33d0ca052b60",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "10.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-7e507dd1-43b2-4413-92e7-33d0ca052b60",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.400Z",
+    "updated_at": "2025-08-26T20:47:48.400Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "3838d7e6-02c6-4076-bdbb-b40f6a54498b",
+  "fields": {
+    "substance": "ab74613a-0238-4bc2-ab02-04f13eaac2c6",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-FER-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "6.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-ab74613a-0238-4bc2-ab02-04f13eaac2c6",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.505Z",
+    "updated_at": "2025-09-11T00:06:45.016Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "3b10c813-3328-49a5-b68b-618c5f6d92b2",
+  "fields": {
+    "substance": "f4a2ddfb-45e3-48dd-add3-8d8882832244",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "11.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-f4a2ddfb-45e3-48dd-add3-8d8882832244",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.477Z",
+    "updated_at": "2025-09-11T00:06:45.000Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "3dd6d60a-a604-4122-9083-d8442cec29c1",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-MET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "10.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.374Z",
+    "updated_at": "2025-09-11T00:06:44.924Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "4800d1bf-8ef5-4aed-99d2-aaa4cf47a24e",
+  "fields": {
+    "substance": "a04f905c-2cc4-4ce1-93d4-4f64996740df",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-ERI-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "3.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-a04f905c-2cc4-4ce1-93d4-4f64996740df",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.494Z",
+    "updated_at": "2025-09-11T00:06:45.010Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "5dde016d-ee89-4f2e-a407-730a0452b17a",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-CUR-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "30.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.350Z",
+    "updated_at": "2025-09-11T00:06:44.908Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "629328b6-ec99-4bb5-905a-64650ffc69b8",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-COM-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "4.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-8db01c23-fec0-46d1-8d25-75d36052577b",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.343Z",
+    "updated_at": "2025-09-11T00:06:44.903Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "64c4d85e-fc93-4d96-a9f8-0b56189edf74",
+  "fields": {
+    "substance": "7082b800-2537-4df8-ba02-738f236faa34",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-COE-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "99.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-7082b800-2537-4df8-ba02-738f236faa34",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.346Z",
+    "updated_at": "2025-09-11T00:06:44.906Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "67702a6f-288d-43cc-ac26-77e8ea2b7d51",
+  "fields": {
+    "substance": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "14.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.390Z",
+    "updated_at": "2025-08-26T20:47:48.390Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "681cf4a8-bc25-403e-9b6e-0bd0cfef4560",
+  "fields": {
+    "substance": "bb903f27-ee1b-46cd-b0ff-cf5be2492a73",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-DIP-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "3.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-bb903f27-ee1b-46cd-b0ff-cf5be2492a73",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.508Z",
+    "updated_at": "2025-09-11T00:06:45.019Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "698f88dd-c88b-4e6e-86d2-644591cf8275",
+  "fields": {
+    "substance": "ebc0eac3-8196-425e-8aec-a4d1b0537c62",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-MET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "8.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-ebc0eac3-8196-425e-8aec-a4d1b0537c62",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.377Z",
+    "updated_at": "2025-09-11T00:06:44.927Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "6c860670-7683-4e53-bfb6-838971cbd904",
+  "fields": {
+    "substance": "58329fd7-c81e-4744-8688-3e26c4f06e60",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "10.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-58329fd7-c81e-4744-8688-3e26c4f06e60",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.397Z",
+    "updated_at": "2025-09-11T00:06:44.945Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "6e09530f-49c1-4d1e-8c15-d148567c507f",
+  "fields": {
+    "substance": "7002f90a-2037-4744-81fe-f56e37c094f4",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "18.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-7002f90a-2037-4744-81fe-f56e37c094f4",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.393Z",
+    "updated_at": "2025-08-26T20:47:48.393Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "73872c67-f846-4106-90ef-dfd5d5dd6ba7",
+  "fields": {
+    "substance": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-CAF-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "8.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.339Z",
+    "updated_at": "2025-09-11T00:06:44.901Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "79919a13-58ef-4ed0-b28f-fdb9ee34e801",
+  "fields": {
+    "substance": "427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-ÁCI-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "5.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.326Z",
+    "updated_at": "2025-09-11T00:06:44.892Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "7a0b418b-759f-40de-ac95-f0f0f4a9c27f",
+  "fields": {
+    "substance": "6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-PQQ-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "44.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.380Z",
+    "updated_at": "2025-09-11T00:06:44.929Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "7ac09507-5a41-41ba-9af3-027de2c48eba",
+  "fields": {
+    "substance": "64a18439-8267-483d-928c-0db93a09e0f7",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-HMB-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "34.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-64a18439-8267-483d-928c-0db93a09e0f7",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.444Z",
+    "updated_at": "2025-09-11T00:06:44.976Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "7b070df2-9fa0-4b00-b6ff-4a373b4a355d",
+  "fields": {
+    "substance": "15f0699b-fc07-4adb-9db3-dbd75ee3850d",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-POO-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "4.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-15f0699b-fc07-4adb-9db3-dbd75ee3850d",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.387Z",
+    "updated_at": "2025-09-11T00:06:44.934Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "7fb2cffb-6039-4b59-b2f5-87002241f265",
+  "fields": {
+    "substance": "7002f90a-2037-4744-81fe-f56e37c094f4",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "34.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-7002f90a-2037-4744-81fe-f56e37c094f4",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.484Z",
+    "updated_at": "2025-08-26T20:47:48.484Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "8994190d-e9d2-4ee7-b686-39530531d8f0",
+  "fields": {
+    "substance": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-MAG-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "14.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.454Z",
+    "updated_at": "2025-09-11T00:06:44.983Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "8a84b9b0-67e7-4e57-8a62-aba120a2c900",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-ACE-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "16.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.417Z",
+    "updated_at": "2025-09-11T00:06:44.960Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "8b31bc27-4fab-4ff8-a30a-6f03e7b24fad",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-CUR-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "15.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.435Z",
+    "updated_at": "2025-09-11T00:06:44.971Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "8df264ff-5d65-455b-a676-cf8c9b07c7ca",
+  "fields": {
+    "substance": "6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-PQQ-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "31.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.467Z",
+    "updated_at": "2025-09-11T00:06:44.993Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "902632ba-cd03-4437-9816-84df89416b8f",
+  "fields": {
+    "substance": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-MAG-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "7.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.367Z",
+    "updated_at": "2025-09-11T00:06:44.919Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "9532b777-90e1-426a-999f-d85676df2a8b",
+  "fields": {
+    "substance": "ebc0eac3-8196-425e-8aec-a4d1b0537c62",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-MET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "7.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-ebc0eac3-8196-425e-8aec-a4d1b0537c62",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.464Z",
+    "updated_at": "2025-09-11T00:06:44.990Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "ad0bb270-5098-46e5-9ed4-35dfce2a6597",
+  "fields": {
+    "substance": "c39313f0-d0f9-4953-987d-a71dda55aa5b",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-BET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "10.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-c39313f0-d0f9-4953-987d-a71dda55aa5b",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.421Z",
+    "updated_at": "2025-09-11T00:06:44.962Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "bc5f19d5-d110-47ff-88dc-018fce5b7101",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-MET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "17.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.370Z",
+    "updated_at": "2025-09-11T00:06:44.922Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "c00798f8-6ff4-46c3-b120-859be76dd381",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-MET-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "23.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.457Z",
+    "updated_at": "2025-09-11T00:06:44.985Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "c63993b1-1364-4152-b126-fb2719938430",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-COM-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "21.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-8db01c23-fec0-46d1-8d25-75d36052577b",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.430Z",
+    "updated_at": "2025-09-11T00:06:44.967Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "d20f465f-93a5-4077-8a1e-c99a314e07fd",
+  "fields": {
+    "substance": "8585674f-ec3b-40cb-9dc5-11145eaac989",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-ERI-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "9.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-8585674f-ec3b-40cb-9dc5-11145eaac989",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.498Z",
+    "updated_at": "2025-09-11T00:06:45.012Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "d7e0b6fd-f520-4003-bff4-f018529f8518",
+  "fields": {
+    "substance": "8585674f-ec3b-40cb-9dc5-11145eaac989",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-ERI-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "22.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-8585674f-ec3b-40cb-9dc5-11145eaac989",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.403Z",
+    "updated_at": "2025-09-11T00:06:44.949Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "d9a5ac31-dea4-4dc7-8090-ba6f0b5c6420",
+  "fields": {
+    "substance": "15f0699b-fc07-4adb-9db3-dbd75ee3850d",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-POO-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "3.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-15f0699b-fc07-4adb-9db3-dbd75ee3850d",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.474Z",
+    "updated_at": "2025-09-11T00:06:44.997Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "d9ff041b-fdd3-4118-86b2-0fa068aebbea",
+  "fields": {
+    "substance": "56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-GLI-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "10.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.450Z",
+    "updated_at": "2025-09-11T00:06:44.981Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "e70699fd-19c0-4959-b8bb-51c8236e1870",
+  "fields": {
+    "substance": "54827a88-bf43-485a-85d9-9dad7b76da5b",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-PIR-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "6.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-54827a88-bf43-485a-85d9-9dad7b76da5b",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.471Z",
+    "updated_at": "2025-09-11T00:06:44.995Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "eb6ab3b5-8b0f-440a-b5b2-8c5e118d13cb",
+  "fields": {
+    "substance": "54827a88-bf43-485a-85d9-9dad7b76da5b",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-PIR-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "3.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-54827a88-bf43-485a-85d9-9dad7b76da5b",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.383Z",
+    "updated_at": "2025-09-11T00:06:44.931Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "ee17facb-ffaf-4e8f-8678-8da25ba55528",
+  "fields": {
+    "substance": "64a18439-8267-483d-928c-0db93a09e0f7",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-HMB-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "25.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-64a18439-8267-483d-928c-0db93a09e0f7",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.357Z",
+    "updated_at": "2025-09-11T00:06:44.913Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "eef767fb-bb2a-46a5-8eec-63c72fbf4593",
+  "fields": {
+    "substance": "003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-CAR-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "38.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.360Z",
+    "updated_at": "2025-09-11T00:06:44.915Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "f89bf844-a6fa-4362-8dab-700edae4ab10",
+  "fields": {
+    "substance": "56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "lote": "RP-GLI-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "8.00",
+    "fornecedor": "Fornecedor RP",
+    "nota_fiscal_ref": "NF-RP-56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.363Z",
+    "updated_at": "2025-09-11T00:06:44.917Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "fa253e96-ac27-4e77-a120-480aa59b722b",
+  "fields": {
+    "substance": "7e507dd1-43b2-4413-92e7-33d0ca052b60",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-VIT-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "14.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-7e507dd1-43b2-4413-92e7-33d0ca052b60",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.491Z",
+    "updated_at": "2025-08-26T20:47:48.491Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.batch",
+  "pk": "fde55349-00c7-4139-b59c-6225c072d267",
+  "fields": {
+    "substance": "003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "lote": "BR-CAR-001",
+    "validade": "2025-12-31",
+    "quantidade_recebida": "26.00",
+    "fornecedor": "Fornecedor Bauru",
+    "nota_fiscal_ref": "NF-BR-003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "preco_unitario": "10.00",
+    "created_at": "2025-08-26T20:47:48.447Z",
+    "updated_at": "2025-09-11T00:06:44.978Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "014c475c-7674-4175-91d5-72831def6d05",
+  "fields": {
+    "substance": "7e507dd1-43b2-4413-92e7-33d0ca052b60",
+    "batch": "356e5120-c12b-4c28-97a8-fe431e28dd23",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "10.00",
+    "created_at": "2025-08-26T20:47:48.401Z",
+    "updated_at": "2025-08-26T20:47:48.401Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "02e6cfea-fcb4-4362-bde6-0bdf172607a5",
+  "fields": {
+    "substance": "7002f90a-2037-4744-81fe-f56e37c094f4",
+    "batch": "6e09530f-49c1-4d1e-8c15-d148567c507f",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "18.00",
+    "created_at": "2025-08-26T20:47:48.395Z",
+    "updated_at": "2025-08-26T20:47:48.395Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "04d8ee35-dd94-451e-b1e3-e4d4fe78cb6a",
+  "fields": {
+    "substance": "d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+    "batch": "2a345f4d-8196-4516-b884-d347851f9b40",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "25.00",
+    "created_at": "2025-08-26T20:47:48.441Z",
+    "updated_at": "2025-08-26T20:47:48.441Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "08189dd9-f545-4769-b034-99bfa33cae22",
+  "fields": {
+    "substance": "54827a88-bf43-485a-85d9-9dad7b76da5b",
+    "batch": "e70699fd-19c0-4959-b8bb-51c8236e1870",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "6.00",
+    "created_at": "2025-08-26T20:47:48.472Z",
+    "updated_at": "2025-08-26T20:47:48.472Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "099987d6-281c-4b5e-97fc-12106ab53706",
+  "fields": {
+    "substance": "003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "batch": "fde55349-00c7-4139-b59c-6225c072d267",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "26.00",
+    "created_at": "2025-08-26T20:47:48.449Z",
+    "updated_at": "2025-08-26T20:47:48.449Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "0a50ddfb-0a0f-45ef-b0c3-a6163137f206",
+  "fields": {
+    "substance": "bb903f27-ee1b-46cd-b0ff-cf5be2492a73",
+    "batch": "681cf4a8-bc25-403e-9b6e-0bd0cfef4560",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "3.00",
+    "created_at": "2025-08-26T20:47:48.509Z",
+    "updated_at": "2025-08-26T20:47:48.509Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "0a777626-ace1-473b-b145-8f7c3c148614",
+  "fields": {
+    "substance": "ebc0eac3-8196-425e-8aec-a4d1b0537c62",
+    "batch": "9532b777-90e1-426a-999f-d85676df2a8b",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "7.00",
+    "created_at": "2025-08-26T20:47:48.465Z",
+    "updated_at": "2025-08-26T20:47:48.465Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "0d920d69-47bd-497d-b4f5-9c7b6428d157",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "batch": "5dde016d-ee89-4f2e-a407-730a0452b17a",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "27.00",
+    "created_at": "2025-08-26T20:47:48.351Z",
+    "updated_at": "2025-08-28T15:50:38.687Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "1666d259-7a61-4531-994e-99df2b120314",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "batch": "8a84b9b0-67e7-4e57-8a62-aba120a2c900",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "15.00",
+    "created_at": "2025-08-26T20:47:48.418Z",
+    "updated_at": "2025-08-28T15:50:38.703Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "28fe0b8f-de4e-4a21-a8fd-cbc870d944cd",
+  "fields": {
+    "substance": "58329fd7-c81e-4744-8688-3e26c4f06e60",
+    "batch": "2a313fdf-a2b8-411f-9678-1120cc286a49",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "10.00",
+    "created_at": "2025-08-26T20:47:48.489Z",
+    "updated_at": "2025-08-26T20:47:48.489Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "2a867704-d258-41c6-b282-96b37ab11ca2",
+  "fields": {
+    "substance": "ebc0eac3-8196-425e-8aec-a4d1b0537c62",
+    "batch": "698f88dd-c88b-4e6e-86d2-644591cf8275",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "8.00",
+    "created_at": "2025-08-26T20:47:48.378Z",
+    "updated_at": "2025-08-26T20:47:48.378Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "35348a61-8b5d-4794-9409-8b4d3a7fcf7f",
+  "fields": {
+    "substance": "64a18439-8267-483d-928c-0db93a09e0f7",
+    "batch": "ee17facb-ffaf-4e8f-8678-8da25ba55528",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "24.00",
+    "created_at": "2025-08-26T20:47:48.358Z",
+    "updated_at": "2025-08-28T15:50:38.699Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "370ddb06-a1db-43aa-8e46-813a333f10cf",
+  "fields": {
+    "substance": "eb9e256b-bf5b-4a97-b492-a17d6f3cc5b3",
+    "batch": "0eade8b6-c7be-4e2a-805a-641e356d18d9",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "3.00",
+    "created_at": "2025-08-26T20:47:48.502Z",
+    "updated_at": "2025-08-26T20:47:48.502Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "37a21003-6a44-4988-b380-1e104d39f871",
+  "fields": {
+    "substance": "ab74613a-0238-4bc2-ab02-04f13eaac2c6",
+    "batch": "3838d7e6-02c6-4076-bdbb-b40f6a54498b",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "6.00",
+    "created_at": "2025-08-26T20:47:48.506Z",
+    "updated_at": "2025-08-26T20:47:48.506Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "3ac6e71d-8eea-49de-92a1-88a3e16ddfe5",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "batch": "2e38ab42-3cfa-49cb-9940-7fcb0df831d3",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "17.00",
+    "created_at": "2025-08-26T20:47:48.462Z",
+    "updated_at": "2025-08-28T15:50:38.710Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "3b843b59-2303-4025-8d6a-04f244c37851",
+  "fields": {
+    "substance": "56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+    "batch": "f89bf844-a6fa-4362-8dab-700edae4ab10",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "8.00",
+    "created_at": "2025-08-26T20:47:48.365Z",
+    "updated_at": "2025-08-26T20:47:48.365Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "43db2669-5e05-427e-8031-a0aa23d8f674",
+  "fields": {
+    "substance": "427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+    "batch": "79919a13-58ef-4ed0-b28f-fdb9ee34e801",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "4.00",
+    "created_at": "2025-08-26T20:47:48.329Z",
+    "updated_at": "2025-08-26T20:47:48.553Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "44e07fc1-89f7-4c02-a415-a787bfc38866",
+  "fields": {
+    "substance": "7082b800-2537-4df8-ba02-738f236faa34",
+    "batch": "64c4d85e-fc93-4d96-a9f8-0b56189edf74",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "98.00",
+    "created_at": "2025-08-26T20:47:48.348Z",
+    "updated_at": "2025-08-26T20:47:48.520Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "511d4d93-43f7-4167-8e59-4bc07f28ed74",
+  "fields": {
+    "substance": "7002f90a-2037-4744-81fe-f56e37c094f4",
+    "batch": "7fb2cffb-6039-4b59-b2f5-87002241f265",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "34.00",
+    "created_at": "2025-08-26T20:47:48.486Z",
+    "updated_at": "2025-08-26T20:47:48.486Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "52f4903f-7cc6-4353-b6b5-6879d47b8e22",
+  "fields": {
+    "substance": "ab74613a-0238-4bc2-ab02-04f13eaac2c6",
+    "batch": "2d8498ba-e584-4138-b516-cf5216459eac",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "35.00",
+    "created_at": "2025-08-26T20:47:48.408Z",
+    "updated_at": "2025-08-26T20:47:48.408Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "55f1addb-225b-4dd7-9352-864b0a433706",
+  "fields": {
+    "substance": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "batch": "73872c67-f846-4106-90ef-dfd5d5dd6ba7",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "7.00",
+    "created_at": "2025-08-26T20:47:48.340Z",
+    "updated_at": "2025-08-26T20:47:48.531Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "5837a6e9-8123-448a-83e2-6e3de77da368",
+  "fields": {
+    "substance": "bb903f27-ee1b-46cd-b0ff-cf5be2492a73",
+    "batch": "0b976b9f-f02b-4141-b70a-5099e7118e90",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "50.00",
+    "created_at": "2025-08-26T20:47:48.411Z",
+    "updated_at": "2025-08-26T20:47:48.411Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "5b896cb4-6981-4d2b-8d1b-b8a57fbc32e9",
+  "fields": {
+    "substance": "56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+    "batch": "d9ff041b-fdd3-4118-86b2-0fa068aebbea",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "10.00",
+    "created_at": "2025-08-26T20:47:48.452Z",
+    "updated_at": "2025-08-26T20:47:48.452Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "5c0a9580-c81b-4c9a-a314-2dc0a143b96d",
+  "fields": {
+    "substance": "6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+    "batch": "8df264ff-5d65-455b-a676-cf8c9b07c7ca",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "31.00",
+    "created_at": "2025-08-26T20:47:48.469Z",
+    "updated_at": "2025-08-26T20:47:48.469Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "627d725d-422f-43f5-a539-14e868d07104",
+  "fields": {
+    "substance": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "batch": "023fca04-486b-42e6-9536-fe8f7362edd3",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "5.00",
+    "created_at": "2025-08-26T20:47:48.427Z",
+    "updated_at": "2025-08-26T20:47:48.427Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "6982b2f6-5dd3-4a71-a334-93f5e4e31090",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "batch": "c63993b1-1364-4152-b126-fb2719938430",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "20.00",
+    "created_at": "2025-08-26T20:47:48.432Z",
+    "updated_at": "2025-08-28T15:50:38.707Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "69ca7a3a-2331-4f3e-9c6a-f3523230a0a6",
+  "fields": {
+    "substance": "7e507dd1-43b2-4413-92e7-33d0ca052b60",
+    "batch": "fa253e96-ac27-4e77-a120-480aa59b722b",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "14.00",
+    "created_at": "2025-08-26T20:47:48.492Z",
+    "updated_at": "2025-08-26T20:47:48.492Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "6b61b1f8-b53c-49ec-82c0-99b20fb50a74",
+  "fields": {
+    "substance": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "batch": "902632ba-cd03-4437-9816-84df89416b8f",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "6.00",
+    "created_at": "2025-08-26T20:47:48.368Z",
+    "updated_at": "2025-08-26T20:47:48.523Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "70a08e2e-39c5-46f7-a80c-79f8da9fe8e6",
+  "fields": {
+    "substance": "6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+    "batch": "7a0b418b-759f-40de-ac95-f0f0f4a9c27f",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "44.00",
+    "created_at": "2025-08-26T20:47:48.381Z",
+    "updated_at": "2025-08-26T20:47:48.381Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "74eff6d2-deea-4661-858b-d944e2dc346e",
+  "fields": {
+    "substance": "427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+    "batch": "11ef9c9a-a8ef-4537-9c33-eed68d6924f9",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "28.00",
+    "created_at": "2025-08-26T20:47:48.415Z",
+    "updated_at": "2025-08-26T20:47:48.415Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "7a754858-0d46-44a2-816f-4ad119d0bf5d",
+  "fields": {
+    "substance": "f4a2ddfb-45e3-48dd-add3-8d8882832244",
+    "batch": "3b10c813-3328-49a5-b68b-618c5f6d92b2",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "10.00",
+    "created_at": "2025-08-26T20:47:48.479Z",
+    "updated_at": "2025-08-28T15:50:38.722Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "7c185415-7234-4ab1-a6c2-e3abc3b7a19f",
+  "fields": {
+    "substance": "d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+    "batch": "317fa25b-0a1c-43a8-8608-daa20b65159f",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "16.00",
+    "created_at": "2025-08-26T20:47:48.355Z",
+    "updated_at": "2025-08-26T20:47:48.355Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "7fccc452-4dc9-4758-8452-aa27de062475",
+  "fields": {
+    "substance": "8585674f-ec3b-40cb-9dc5-11145eaac989",
+    "batch": "d7e0b6fd-f520-4003-bff4-f018529f8518",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "22.00",
+    "created_at": "2025-08-26T20:47:48.405Z",
+    "updated_at": "2025-08-26T20:47:48.405Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "8d1939b1-e13a-4e76-beb9-af8cfe5868ee",
+  "fields": {
+    "substance": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "batch": "8994190d-e9d2-4ee7-b686-39530531d8f0",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "14.00",
+    "created_at": "2025-08-26T20:47:48.455Z",
+    "updated_at": "2025-08-26T20:47:48.455Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "9481ec0f-5119-450e-bc64-65e5d75909b2",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "batch": "bc5f19d5-d110-47ff-88dc-018fce5b7101",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "14.00",
+    "created_at": "2025-08-26T20:47:48.372Z",
+    "updated_at": "2025-08-28T15:50:38.674Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "95dbf855-bae9-4b99-8401-7e548118ec04",
+  "fields": {
+    "substance": "c39313f0-d0f9-4953-987d-a71dda55aa5b",
+    "batch": "ad0bb270-5098-46e5-9ed4-35dfce2a6597",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "10.00",
+    "created_at": "2025-08-26T20:47:48.423Z",
+    "updated_at": "2025-08-26T20:47:48.423Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "99dc5969-e130-4ba1-a359-bb980fd3c0ae",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "batch": "13e4ee12-0315-4c37-99cf-7b60a1cd9e89",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "13.00",
+    "created_at": "2025-08-26T20:47:48.332Z",
+    "updated_at": "2025-08-28T15:50:38.683Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "9c8b5395-b9c1-4994-8f80-6d25ebd223c9",
+  "fields": {
+    "substance": "54827a88-bf43-485a-85d9-9dad7b76da5b",
+    "batch": "eb6ab3b5-8b0f-440a-b5b2-8c5e118d13cb",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "3.00",
+    "created_at": "2025-08-26T20:47:48.385Z",
+    "updated_at": "2025-08-26T20:47:48.385Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "9cb841b1-f5c5-4e8d-b858-e05e174c17de",
+  "fields": {
+    "substance": "c39313f0-d0f9-4953-987d-a71dda55aa5b",
+    "batch": "1372bc35-54b6-446a-8e41-8c5abcbd6d35",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "3.00",
+    "created_at": "2025-08-26T20:47:48.336Z",
+    "updated_at": "2025-08-26T20:47:48.336Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "9edbdb74-6a64-493b-a3c3-b54c5aa59f15",
+  "fields": {
+    "substance": "8585674f-ec3b-40cb-9dc5-11145eaac989",
+    "batch": "d20f465f-93a5-4077-8a1e-c99a314e07fd",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "9.00",
+    "created_at": "2025-08-26T20:47:48.499Z",
+    "updated_at": "2025-08-26T20:47:48.499Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "a6f2c81a-9638-41db-8d2d-f452f47ea4e9",
+  "fields": {
+    "substance": "a04f905c-2cc4-4ce1-93d4-4f64996740df",
+    "batch": "4800d1bf-8ef5-4aed-99d2-aaa4cf47a24e",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "3.00",
+    "created_at": "2025-08-26T20:47:48.496Z",
+    "updated_at": "2025-08-26T20:47:48.496Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "ab69567f-7ed5-4951-8a63-b63dca803298",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "batch": "c00798f8-6ff4-46c3-b120-859be76dd381",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "22.00",
+    "created_at": "2025-08-26T20:47:48.459Z",
+    "updated_at": "2025-08-28T15:50:38.714Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "b4bdc19e-7bf5-47c8-8803-cf65303dc9f6",
+  "fields": {
+    "substance": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "batch": "23e98f34-a7c9-478e-b390-32d7aa14fed9",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "9.00",
+    "created_at": "2025-08-26T20:47:48.482Z",
+    "updated_at": "2025-08-26T20:47:48.482Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "b8899e9c-5880-4079-a2bd-7c23de01b809",
+  "fields": {
+    "substance": "003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "batch": "eef767fb-bb2a-46a5-8eec-63c72fbf4593",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "37.00",
+    "created_at": "2025-08-26T20:47:48.361Z",
+    "updated_at": "2025-08-28T15:50:38.691Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "b8a8945e-e85a-4c28-86a4-4c0701326889",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "batch": "629328b6-ec99-4bb5-905a-64650ffc69b8",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "1.00",
+    "created_at": "2025-08-26T20:47:48.344Z",
+    "updated_at": "2025-08-28T15:50:38.669Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "bcd96bd5-20b7-4279-a63a-08a11ca915b1",
+  "fields": {
+    "substance": "15f0699b-fc07-4adb-9db3-dbd75ee3850d",
+    "batch": "d9a5ac31-dea4-4dc7-8090-ba6f0b5c6420",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "3.00",
+    "created_at": "2025-08-26T20:47:48.475Z",
+    "updated_at": "2025-08-26T20:47:48.475Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "cb6f2482-b712-46db-9e08-86c6e1259673",
+  "fields": {
+    "substance": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "batch": "67702a6f-288d-43cc-ac26-77e8ea2b7d51",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "12.00",
+    "created_at": "2025-08-26T20:47:48.391Z",
+    "updated_at": "2025-08-28T15:50:38.695Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "d6ecc9c0-ab8b-46d7-8681-e6456602b061",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "batch": "3dd6d60a-a604-4122-9083-d8442cec29c1",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "7.00",
+    "created_at": "2025-08-26T20:47:48.375Z",
+    "updated_at": "2025-08-28T15:50:38.678Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "dff11aeb-f192-47fe-b780-0169e3174c24",
+  "fields": {
+    "substance": "15f0699b-fc07-4adb-9db3-dbd75ee3850d",
+    "batch": "7b070df2-9fa0-4b00-b6ff-4a373b4a355d",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "4.00",
+    "created_at": "2025-08-26T20:47:48.388Z",
+    "updated_at": "2025-08-26T20:47:48.388Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "e19ff5a0-35f0-40f6-9f20-114bbd215ef4",
+  "fields": {
+    "substance": "58329fd7-c81e-4744-8688-3e26c4f06e60",
+    "batch": "6c860670-7683-4e53-bfb6-838971cbd904",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "quantity_on_hand": "10.00",
+    "created_at": "2025-08-26T20:47:48.398Z",
+    "updated_at": "2025-08-26T20:47:48.398Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "ea9bd83e-bd60-4456-ab9c-e73d4f059725",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "batch": "8b31bc27-4fab-4ff8-a30a-6f03e7b24fad",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "14.00",
+    "created_at": "2025-08-26T20:47:48.436Z",
+    "updated_at": "2025-08-28T15:50:38.718Z"
+  }
+},
+{
+  "model": "inventory.inventory",
+  "pk": "ec344944-9703-4e7b-a0c7-5a3a11db2f30",
+  "fields": {
+    "substance": "64a18439-8267-483d-928c-0db93a09e0f7",
+    "batch": "7ac09507-5a41-41ba-9af3-027de2c48eba",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "quantity_on_hand": "34.00",
+    "created_at": "2025-08-26T20:47:48.445Z",
+    "updated_at": "2025-08-26T20:47:48.445Z"
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "049f9e70-8629-4dfa-8e0c-0f4e24ebe452",
+  "fields": {
+    "substance": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "batch": "73872c67-f846-4106-90ef-dfd5d5dd6ba7",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Dr. Antonio",
+    "paciente": "8d9538ac-dc9a-4b3f-8132-a387a34bce7d",
+    "paciente_nome": "Dr. Antonio",
+    "procedimento": "Protocolo antioxidante",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.530Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "1b1abf4a-f053-48d2-8f82-c09dabc81e12",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "batch": "3dd6d60a-a604-4122-9083-d8442cec29c1",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 3 - Rita (curso)",
+    "paciente": "4741021a-9c03-4a49-b2c4-48550d3c0133",
+    "paciente_nome": "Rita (curso)",
+    "procedimento": "Protocolo Complexo B + acréscimo",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.541Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "26c0f17c-a074-4f9b-b7e7-c54761f18cb4",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "batch": "2e38ab42-3cfa-49cb-9940-7fcb0df831d3",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Andreia",
+    "paciente": "1124fe92-c669-44dd-a00f-42d52c635b1c",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Andreia (suplente do curso)",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.709Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "300bc714-85e3-4654-9097-8d811d537e61",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "batch": "3dd6d60a-a604-4122-9083-d8442cec29c1",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.677Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "33837c27-cb1a-4011-a839-32809c3feed3",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "batch": "bc5f19d5-d110-47ff-88dc-018fce5b7101",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.673Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "362c194b-312f-403a-9830-2cc7149877f2",
+  "fields": {
+    "substance": "427a3c1a-bd10-42e7-8b7e-02ee33849bc2",
+    "batch": "79919a13-58ef-4ed0-b28f-fdb9ee34e801",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 3 - Rita (curso)",
+    "paciente": "4741021a-9c03-4a49-b2c4-48550d3c0133",
+    "paciente_nome": "Rita (curso)",
+    "procedimento": "Protocolo Complexo B + acréscimo",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.552Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "40a11534-980a-4409-9054-ed37cfb07c37",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "batch": "c63993b1-1364-4152-b126-fb2719938430",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Andreia",
+    "paciente": "1124fe92-c669-44dd-a00f-42d52c635b1c",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Andreia (suplente do curso)",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.706Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "48c784c8-7d46-4ff3-8a90-5f974702cc0d",
+  "fields": {
+    "substance": "7082b800-2537-4df8-ba02-738f236faa34",
+    "batch": "64c4d85e-fc93-4d96-a9f8-0b56189edf74",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Dr. Antonio",
+    "paciente": "8d9538ac-dc9a-4b3f-8132-a387a34bce7d",
+    "paciente_nome": "Dr. Antonio",
+    "procedimento": "Protocolo antioxidante",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.519Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "543e0670-9186-492e-adc9-f531033192f2",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "batch": "629328b6-ec99-4bb5-905a-64650ffc69b8",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.668Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "6708d488-29fe-44bf-9175-547b178d4ae4",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "batch": "5dde016d-ee89-4f2e-a407-730a0452b17a",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 3 - Rita (curso)",
+    "paciente": "4741021a-9c03-4a49-b2c4-48550d3c0133",
+    "paciente_nome": "Rita (curso)",
+    "procedimento": "Protocolo Complexo B + acréscimo",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.545Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "672b88de-3f31-4022-ac3c-c034849ffc31",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "batch": "629328b6-ec99-4bb5-905a-64650ffc69b8",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Beatriz Mendes",
+    "paciente": "c5e5c391-4bb3-4e9d-b10c-e1feb12d9921",
+    "paciente_nome": "Beatriz Mendes",
+    "procedimento": "Protocolo inicial com Vitamina D",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.556Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "74a34772-53ff-42ac-9737-0f2cab11343a",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "batch": "629328b6-ec99-4bb5-905a-64650ffc69b8",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 3 - Rita (curso)",
+    "paciente": "4741021a-9c03-4a49-b2c4-48550d3c0133",
+    "paciente_nome": "Rita (curso)",
+    "procedimento": "Protocolo Complexo B + acréscimo",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.534Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "7eb9f812-24b9-4fec-9e39-da02ab307cdd",
+  "fields": {
+    "substance": "003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "batch": "eef767fb-bb2a-46a5-8eec-63c72fbf4593",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.690Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "93e0e50b-acad-40b5-88e2-92d537d5c95e",
+  "fields": {
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "batch": "3dd6d60a-a604-4122-9083-d8442cec29c1",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Beatriz Mendes",
+    "paciente": "c5e5c391-4bb3-4e9d-b10c-e1feb12d9921",
+    "paciente_nome": "Beatriz Mendes",
+    "procedimento": "Protocolo inicial com Vitamina D",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.563Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "9cb729a5-9c62-4a71-8dd2-586bc269ccf3",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "batch": "c00798f8-6ff4-46c3-b120-859be76dd381",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Andreia",
+    "paciente": "1124fe92-c669-44dd-a00f-42d52c635b1c",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Andreia (suplente do curso)",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.713Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "9dead336-c36a-4fcc-847f-6625182a8d38",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "batch": "5dde016d-ee89-4f2e-a407-730a0452b17a",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Dr. Antonio",
+    "paciente": "8d9538ac-dc9a-4b3f-8132-a387a34bce7d",
+    "paciente_nome": "Dr. Antonio",
+    "procedimento": "Protocolo antioxidante",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.526Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "a34b64e8-39c9-4926-a205-ec5058b71ebc",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "batch": "8a84b9b0-67e7-4e57-8a62-aba120a2c900",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Andreia",
+    "paciente": "1124fe92-c669-44dd-a00f-42d52c635b1c",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Andreia (suplente do curso)",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.702Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "a99d4b66-5a80-487f-bb4a-bffacd71f95b",
+  "fields": {
+    "substance": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "batch": "67702a6f-288d-43cc-ac26-77e8ea2b7d51",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Beatriz Mendes",
+    "paciente": "c5e5c391-4bb3-4e9d-b10c-e1feb12d9921",
+    "paciente_nome": "Beatriz Mendes",
+    "procedimento": "Protocolo inicial com Vitamina D",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.570Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "b0bbe34b-3ab9-41ca-972e-3c572d7ab296",
+  "fields": {
+    "substance": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "batch": "902632ba-cd03-4437-9816-84df89416b8f",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Dr. Antonio",
+    "paciente": "8d9538ac-dc9a-4b3f-8132-a387a34bce7d",
+    "paciente_nome": "Dr. Antonio",
+    "procedimento": "Protocolo antioxidante",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.523Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "b7d95eda-3420-4c0e-9a7b-4d394ce0d9e3",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "batch": "13e4ee12-0315-4c37-99cf-7b60a1cd9e89",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.681Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "b8d3f8c2-9021-4551-b231-2d6176468be4",
+  "fields": {
+    "substance": "64a18439-8267-483d-928c-0db93a09e0f7",
+    "batch": "ee17facb-ffaf-4e8f-8678-8da25ba55528",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.698Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "bfcc45c1-4506-47fd-b7d6-50fafceb3529",
+  "fields": {
+    "substance": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "batch": "67702a6f-288d-43cc-ac26-77e8ea2b7d51",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.694Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "c0c60770-6e9b-4329-b107-201529666daf",
+  "fields": {
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "batch": "629328b6-ec99-4bb5-905a-64650ffc69b8",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "",
+    "paciente": "2d4f5646-4a04-45a3-bd9f-6380d78bf803",
+    "paciente_nome": "",
+    "procedimento": "",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-09-11T00:06:45.023Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "c0f15fbf-282a-4f3b-9282-4d5d49a2265a",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "batch": "bc5f19d5-d110-47ff-88dc-018fce5b7101",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Beatriz Mendes",
+    "paciente": "c5e5c391-4bb3-4e9d-b10c-e1feb12d9921",
+    "paciente_nome": "Beatriz Mendes",
+    "procedimento": "Protocolo inicial com Vitamina D",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.559Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "ca2da47a-c398-4150-afbb-191171b0243b",
+  "fields": {
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "batch": "bc5f19d5-d110-47ff-88dc-018fce5b7101",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 3 - Rita (curso)",
+    "paciente": "4741021a-9c03-4a49-b2c4-48550d3c0133",
+    "paciente_nome": "Rita (curso)",
+    "procedimento": "Protocolo Complexo B + acréscimo",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.537Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "cc227c99-85e1-4bef-b051-c4a40884f8a9",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "batch": "13e4ee12-0315-4c37-99cf-7b60a1cd9e89",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 1 - Beatriz Mendes",
+    "paciente": "c5e5c391-4bb3-4e9d-b10c-e1feb12d9921",
+    "paciente_nome": "Beatriz Mendes",
+    "procedimento": "Protocolo inicial com Vitamina D",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.566Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "cd6e4077-e322-404b-a668-64b672564859",
+  "fields": {
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "batch": "13e4ee12-0315-4c37-99cf-7b60a1cd9e89",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Sessão 3 - Rita (curso)",
+    "paciente": "4741021a-9c03-4a49-b2c4-48550d3c0133",
+    "paciente_nome": "Rita (curso)",
+    "procedimento": "Protocolo Complexo B + acréscimo",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-26T20:47:48.549Z",
+    "user": 1,
+    "ip_address": "127.0.0.1",
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "d3704aab-60df-4714-ae62-8255276bfbd2",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "batch": "5dde016d-ee89-4f2e-a407-730a0452b17a",
+    "unit": "fce0048e-3366-4689-a164-c93876ea3020",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Isleila",
+    "paciente": "cb90232e-940f-416d-ad3f-4d1ed3dc60ae",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Isleila",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.686Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "d43ce0cc-298d-4800-b067-db59a223c38b",
+  "fields": {
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "batch": "8b31bc27-4fab-4ff8-a30a-6f03e7b24fad",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Andreia",
+    "paciente": "1124fe92-c669-44dd-a00f-42d52c635b1c",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Andreia (suplente do curso)",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.717Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.stockmovement",
+  "pk": "e1542fca-b578-408f-becb-61d5e0a0afd6",
+  "fields": {
+    "substance": "f4a2ddfb-45e3-48dd-add3-8d8882832244",
+    "batch": "3b10c813-3328-49a5-b68b-618c5f6d92b2",
+    "unit": "af17ec73-73e1-4ebb-98f3-4e3f32a8e2e2",
+    "tipo": "saida",
+    "quantidade": "1.00",
+    "motivo": "Saída para sessão da paciente Andreia",
+    "paciente": "1124fe92-c669-44dd-a00f-42d52c635b1c",
+    "paciente_nome": "",
+    "procedimento": "3ª Sessão - Andreia (suplente do curso)",
+    "session": null,
+    "unidade_destino": null,
+    "data_hora": "2025-08-28T15:50:38.721Z",
+    "user": 1,
+    "ip_address": null,
+    "user_agent": ""
+  }
+},
+{
+  "model": "inventory.protocoltemplate",
+  "pk": "13b9e990-460b-4138-b95c-c3f59a3d866b",
+  "fields": {
+    "name": "Protocolo Antioxidante",
+    "description": "Protocolo focado em antioxidantes para combate ao estresse oxidativo e envelhecimento celular.",
+    "is_active": true,
+    "default_sessions": 4,
+    "created_at": "2025-08-26T21:30:03.985Z",
+    "updated_at": "2025-08-26T21:30:03.985Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.protocoltemplate",
+  "pk": "25c63e18-f9ca-4da2-bd69-b424c44db619",
+  "fields": {
+    "name": "Protocolo Performance Esportiva",
+    "description": "Protocolo para atletas e pessoas ativas, focado em performance e recuperação.",
+    "is_active": true,
+    "default_sessions": 6,
+    "created_at": "2025-08-26T21:30:04.008Z",
+    "updated_at": "2025-08-26T21:30:04.008Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.protocoltemplate",
+  "pk": "31d52fa9-730d-4233-954c-2413e7aca9db",
+  "fields": {
+    "name": "Protocolo Complexo B",
+    "description": "Protocolo com vitaminas do complexo B para energia e metabolismo celular.",
+    "is_active": true,
+    "default_sessions": 3,
+    "created_at": "2025-08-26T21:30:03.994Z",
+    "updated_at": "2025-08-26T21:30:03.994Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.protocoltemplate",
+  "pk": "57f1a739-9def-4a37-bc1f-967776088e9a",
+  "fields": {
+    "name": "Protocolo Anti-aging",
+    "description": "Protocolo completo para longevidade e anti-envelhecimento.",
+    "is_active": true,
+    "default_sessions": 8,
+    "created_at": "2025-08-26T21:30:04.020Z",
+    "updated_at": "2025-08-26T21:30:04.020Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.protocoltemplate",
+  "pk": "6377d5c2-1d44-43a9-b417-648fbed05970",
+  "fields": {
+    "name": "Protocolo Vitamina D",
+    "description": "Protocolo com alta dose de Vitamina D para deficiência severa (apenas primeira sessão).",
+    "is_active": true,
+    "default_sessions": 1,
+    "created_at": "2025-08-26T21:30:04.002Z",
+    "updated_at": "2025-08-26T21:30:04.002Z",
+    "created_by": 1
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "02f5bbbd-f54f-4912-a2ba-3faf6d4b5eec",
+  "fields": {
+    "protocol": "57f1a739-9def-4a37-bc1f-967776088e9a",
+    "substance": "6e52bada-7f09-4918-8b79-d6cc4c8e5ac1",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 2,
+    "notes": "Dosagem padrão para PQQ"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "051923f4-277f-46e6-b81f-a951ddb6bed8",
+  "fields": {
+    "protocol": "57f1a739-9def-4a37-bc1f-967776088e9a",
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "default_quantity": "1.00",
+    "is_optional": true,
+    "order": 6,
+    "notes": "Dosagem padrão para Metilfolato"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "1003ab71-6cbf-4b45-ae60-e472092b8f22",
+  "fields": {
+    "protocol": "13b9e990-460b-4138-b95c-c3f59a3d866b",
+    "substance": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 3,
+    "notes": "Dosagem padrão para Magnésio"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "108d43e7-b6fe-435e-8e2a-60fd3895ae30",
+  "fields": {
+    "protocol": "31d52fa9-730d-4233-954c-2413e7aca9db",
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 2,
+    "notes": "Dosagem padrão para Metilfolato"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "1ab70687-45f5-48fe-9109-d4b981d02b20",
+  "fields": {
+    "protocol": "57f1a739-9def-4a37-bc1f-967776088e9a",
+    "substance": "7002f90a-2037-4744-81fe-f56e37c094f4",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 5,
+    "notes": "Dosagem padrão para Vitamina C"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "289a733a-45b7-4185-ba46-0ec516b11da9",
+  "fields": {
+    "protocol": "25c63e18-f9ca-4da2-bd69-b424c44db619",
+    "substance": "a364db1c-e789-46a0-a61c-2c897c487ff7",
+    "default_quantity": "1.00",
+    "is_optional": true,
+    "order": 5,
+    "notes": "Dosagem padrão para Magnésio"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "5d454b90-420d-4502-90b0-0fa1ecef9528",
+  "fields": {
+    "protocol": "57f1a739-9def-4a37-bc1f-967776088e9a",
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "default_quantity": "1.00",
+    "is_optional": true,
+    "order": 7,
+    "notes": "Dosagem padrão para Metilcobalamina"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "74796e34-166f-4978-856b-3414bec8fb84",
+  "fields": {
+    "protocol": "57f1a739-9def-4a37-bc1f-967776088e9a",
+    "substance": "7082b800-2537-4df8-ba02-738f236faa34",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 1,
+    "notes": "Dosagem padrão para Coenzima Q10"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "7a3baf5b-18b9-4f93-ac09-c12cee276591",
+  "fields": {
+    "protocol": "57f1a739-9def-4a37-bc1f-967776088e9a",
+    "substance": "d297dee2-03d1-4f7a-8b9a-f58ec61312fd",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 4,
+    "notes": "Dosagem padrão para Gluthathion"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "7cf39041-83d8-4356-a3fc-0f43d7d3319c",
+  "fields": {
+    "protocol": "13b9e990-460b-4138-b95c-c3f59a3d866b",
+    "substance": "7082b800-2537-4df8-ba02-738f236faa34",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 1,
+    "notes": "Dosagem padrão para Coenzima Q10"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "93bf45f0-bc4b-40d3-b0cf-3b4cbe2b60df",
+  "fields": {
+    "protocol": "13b9e990-460b-4138-b95c-c3f59a3d866b",
+    "substance": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "default_quantity": "1.00",
+    "is_optional": true,
+    "order": 4,
+    "notes": "Dosagem padrão para Cafeína"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "99989831-c071-40cc-8852-26ec4f339fc0",
+  "fields": {
+    "protocol": "31d52fa9-730d-4233-954c-2413e7aca9db",
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 1,
+    "notes": "Dosagem padrão para Complexo B"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "9c5d8cdc-0796-4ad0-a9e6-80a1d3039de0",
+  "fields": {
+    "protocol": "6377d5c2-1d44-43a9-b417-648fbed05970",
+    "substance": "c99f384a-529c-4202-a6d0-eb20f3db2445",
+    "default_quantity": "1.00",
+    "is_optional": true,
+    "order": 3,
+    "notes": "Dosagem padrão para Metilfolato"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "a3c3e6e3-c744-4c73-96d2-3484ad41d823",
+  "fields": {
+    "protocol": "25c63e18-f9ca-4da2-bd69-b424c44db619",
+    "substance": "3a2da8f7-5c61-4dd8-af32-a4d59c98a1d5",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 4,
+    "notes": "Dosagem padrão para Cafeína"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "b1f57c18-5be1-4a33-bdde-8a5a20dd7eca",
+  "fields": {
+    "protocol": "31d52fa9-730d-4233-954c-2413e7aca9db",
+    "substance": "da0dda77-acde-4f5c-9b6c-5689fdd1c1cd",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 4,
+    "notes": "Dosagem padrão para Acetilcisteina"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "b8a7aed8-034f-4267-9703-ae43ab5e82f1",
+  "fields": {
+    "protocol": "25c63e18-f9ca-4da2-bd69-b424c44db619",
+    "substance": "64a18439-8267-483d-928c-0db93a09e0f7",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 2,
+    "notes": "Dosagem padrão para HMB"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "c1e2780b-f836-43ce-a69e-4cae3526ccaa",
+  "fields": {
+    "protocol": "25c63e18-f9ca-4da2-bd69-b424c44db619",
+    "substance": "c39313f0-d0f9-4953-987d-a71dda55aa5b",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 3,
+    "notes": "Dosagem padrão para Beta alanina"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "d8e6fdf7-50b6-4c46-a84d-46084996c060",
+  "fields": {
+    "protocol": "25c63e18-f9ca-4da2-bd69-b424c44db619",
+    "substance": "003ecd80-ee09-4a19-9f5a-1414d1578ba0",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 1,
+    "notes": "Dosagem padrão para Carnitina"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "d989c2b9-3094-448d-b1c4-465c874e70d0",
+  "fields": {
+    "protocol": "13b9e990-460b-4138-b95c-c3f59a3d866b",
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 2,
+    "notes": "Dosagem padrão para Curcumina"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "dd389ef2-167c-486d-940b-ad2ac9aaac88",
+  "fields": {
+    "protocol": "6377d5c2-1d44-43a9-b417-648fbed05970",
+    "substance": "ca98a0a3-9231-40f3-a40b-26e55d16f069",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 1,
+    "notes": "Apenas na primeira sessão"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "e7b60f27-7929-4d78-b307-604449fb2dae",
+  "fields": {
+    "protocol": "6377d5c2-1d44-43a9-b417-648fbed05970",
+    "substance": "8db01c23-fec0-46d1-8d25-75d36052577b",
+    "default_quantity": "1.00",
+    "is_optional": true,
+    "order": 2,
+    "notes": "Dosagem padrão para Complexo B"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "f86ccfd6-5f4f-415e-8e8a-08762a3df622",
+  "fields": {
+    "protocol": "25c63e18-f9ca-4da2-bd69-b424c44db619",
+    "substance": "56cedfd2-462c-429f-b7dd-6ce23d3357ff",
+    "default_quantity": "1.00",
+    "is_optional": true,
+    "order": 6,
+    "notes": "Dosagem padrão para Glicina"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "fc404e35-17cc-4c2e-b48d-1e894abbb413",
+  "fields": {
+    "protocol": "57f1a739-9def-4a37-bc1f-967776088e9a",
+    "substance": "6b1e1fc1-6292-471d-aded-4e596f162feb",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 3,
+    "notes": "Dosagem padrão para Curcumina"
+  }
+},
+{
+  "model": "inventory.protocolsubstance",
+  "pk": "fe691cd8-36ef-4186-864f-240bd93e41d7",
+  "fields": {
+    "protocol": "31d52fa9-730d-4233-954c-2413e7aca9db",
+    "substance": "7b6b1049-49ef-422a-b1a2-c4d4406ffbab",
+    "default_quantity": "1.00",
+    "is_optional": false,
+    "order": 3,
+    "notes": "Dosagem padrão para Metilcobalamina"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$I53GmAtNACQlyqiAIcE9Ax$8ArrMCtpkcLS1nADDQn3zunAJh7S7HpLiv0DOcAAPJo=",
+    "last_login": "2025-09-13T02:43:32.613Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Administrador",
+    "last_name": "Sistema",
+    "email": "admin@clinica.com",
+    "is_staff": true,
+    "date_joined": "2025-08-26T20:47:47.050Z",
+    "nome": "",
+    "telefone": "",
+    "role": "admin",
+    "empregado_id": null,
+    "is_active": true,
+    "totp_secret": "",
+    "two_factor_enabled": false,
+    "created_at": "2025-08-26T20:47:47.051Z",
+    "updated_at": "2025-08-26T20:47:47.443Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$ThEs4Bpqa2GWVPSMPhMLZU$YPKsbRRKB75iZPs7m2yDNWnD6x/vHDjAKjY1M47pfWM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "chefe",
+    "first_name": "Dr. Antonio",
+    "last_name": "Marcos",
+    "email": "chefe@clinica.com",
+    "is_staff": true,
+    "date_joined": "2025-08-26T20:47:47.455Z",
+    "nome": "",
+    "telefone": "",
+    "role": "chefe",
+    "empregado_id": null,
+    "is_active": true,
+    "totp_secret": "",
+    "two_factor_enabled": false,
+    "created_at": "2025-08-26T20:47:47.455Z",
+    "updated_at": "2025-08-26T20:47:47.856Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$gt6WvCmswR6R54vOXK8spt$FJtQLFRUh6+ZkARO8F8cWz/mRYWSDvt23T72c+GBjGI=",
+    "last_login": "2025-09-13T02:44:12.640Z",
+    "is_superuser": false,
+    "username": "funcionario",
+    "first_name": "Funcionário",
+    "last_name": "Clínica",
+    "email": "funcionario@clinica.com",
+    "is_staff": false,
+    "date_joined": "2025-08-26T20:47:47.858Z",
+    "nome": "",
+    "telefone": "",
+    "role": "funcionario",
+    "empregado_id": null,
+    "is_active": true,
+    "totp_secret": "",
+    "two_factor_enabled": false,
+    "created_at": "2025-08-26T20:47:47.859Z",
+    "updated_at": "2025-08-26T20:47:48.279Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "44.198.53.118",
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "timestamp": "2025-08-26T20:48:31.351Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "172.225.82.142",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-08-26T21:54:19.551Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.116",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-08-26T22:44:36.219Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.114",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-08-28T15:35:54.594Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "3.231.59.27",
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "timestamp": "2025-08-28T15:53:39.704Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.115",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-08-28T16:27:31.290Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.102",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-08-28T16:42:19.637Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.114",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-08-28T16:43:19.439Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "191.55.67.41",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",
+    "timestamp": "2025-08-28T17:04:28.461Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 10,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "34.206.71.197",
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "timestamp": "2025-08-29T14:14:34.883Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 11,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "172.225.82.142",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-08-30T02:45:43.499Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 12,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.99",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:27:32.687Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 13,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.117",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:27:58.595Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 14,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.114",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:30:09.141Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 15,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.99",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:33:10.973Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 16,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "104.28.63.113",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:35:22.373Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "187.72.124.187",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:43:32.617Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 18,
+  "fields": {
+    "user": null,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "failed_username": "chef",
+      "ip": "187.72.124.187"
+    },
+    "ip_address": "187.72.124.187",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:43:53.950Z"
+  }
+},
+{
+  "model": "users.auditlog",
+  "pk": 19,
+  "fields": {
+    "user": 3,
+    "action": "login",
+    "table_name": "auth",
+    "record_id": "",
+    "old_value": null,
+    "new_value": {
+      "2fa": false
+    },
+    "ip_address": "187.72.124.187",
+    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+    "timestamp": "2025-09-13T02:44:12.646Z"
+  }
+}
+]

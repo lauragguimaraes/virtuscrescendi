@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gestão de Preços{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-dollar-sign"></i> Gestão de Preços</h2>
+                <button class="btn btn-success" onclick="saveAllPrices()">
+                    <i class="fas fa-save"></i> Salvar Alterações
+                </button>
+            </div>
+
+            <!-- Estatísticas -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h4>29</h4>
+                            <p class="mb-0">Substâncias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h4>R$ 45,50</h4>
+                            <p class="mb-0">Preço Médio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h4>15</h4>
+                            <p class="mb-0">Com Preço Definido</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h4>14</h4>
+                            <p class="mb-0">Sem Preço</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela de Preços -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Preços por Substância</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Substância</th>
+                                    <th>Preço Atual</th>
+                                    <th>Novo Preço</th>
+                                    <th>Margem (%)</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ácido Alfa lipoico</strong></td>
+                                    <td><span class="badge bg-success">R$ 35,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="35.00" step="0.01"></td>
+                                    <td><span class="text-success">65%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Acetilcisteina</strong></td>
+                                    <td><span class="badge bg-success">R$ 28,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="28.00" step="0.01"></td>
+                                    <td><span class="text-success">70%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Beta alanina</strong></td>
+                                    <td><span class="badge bg-success">R$ 42,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="42.00" step="0.01"></td>
+                                    <td><span class="text-success">60%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cafeína</strong></td>
+                                    <td><span class="badge bg-success">R$ 25,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="25.00" step="0.01"></td>
+                                    <td><span class="text-success">75%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Complexo B</strong></td>
+                                    <td><span class="badge bg-success">R$ 30,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="30.00" step="0.01"></td>
+                                    <td><span class="text-success">67%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Coenzima Q10</strong></td>
+                                    <td><span class="badge bg-success">R$ 85,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="85.00" step="0.01"></td>
+                                    <td><span class="text-success">55%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Curcumina</strong></td>
+                                    <td><span class="badge bg-success">R$ 38,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="38.00" step="0.01"></td>
+                                    <td><span class="text-success">62%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gluthathion</strong></td>
+                                    <td><span class="badge bg-success">R$ 95,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="95.00" step="0.01"></td>
+                                    <td><span class="text-success">50%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HMB</strong></td>
+                                    <td><span class="badge bg-success">R$ 45,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="45.00" step="0.01"></td>
+                                    <td><span class="text-success">58%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Carnitina</strong></td>
+                                    <td><span class="badge bg-success">R$ 40,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="40.00" step="0.01"></td>
+                                    <td><span class="text-success">60%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vitamina D 600</strong></td>
+                                    <td><span class="badge bg-success">R$ 55,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="55.00" step="0.01"></td>
+                                    <td><span class="text-success">52%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vitamina D 100</strong></td>
+                                    <td><span class="badge bg-success">R$ 35,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="35.00" step="0.01"></td>
+                                    <td><span class="text-success">65%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vitamina C</strong></td>
+                                    <td><span class="badge bg-success">R$ 32,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="32.00" step="0.01"></td>
+                                    <td><span class="text-success">68%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Metilfolato</strong></td>
+                                    <td><span class="badge bg-success">R$ 48,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="48.00" step="0.01"></td>
+                                    <td><span class="text-success">56%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Metilcobalamina</strong></td>
+                                    <td><span class="badge bg-success">R$ 52,00</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" value="52.00" step="0.01"></td>
+                                    <td><span class="text-success">54%</span></td>
+                                    <td><span class="badge bg-success">Definido</span></td>
+                                    <td><button class="btn btn-sm btn-outline-primary">Histórico</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Eritropoetina</strong></td>
+                                    <td><span class="badge bg-warning">Não definido</span></td>
+                                    <td><input type="number" class="form-control form-control-sm" placeholder="0.00" step="0.01"></td>
+                                    <td><span class="text-muted">-</span></td>
+                                    <td><span class="badge bg-warning">Pendente</span></td>
+                                    <td><button class="btn btn-sm btn-outline-warning">Definir</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ações em Lote -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Ações em Lote</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-primary w-100 mb-2">
+                                <i class="fas fa-percentage"></i> Aplicar Desconto
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-success w-100 mb-2">
+                                <i class="fas fa-arrow-up"></i> Aumentar Preços
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-info w-100 mb-2">
+                                <i class="fas fa-copy"></i> Copiar de Protocolo
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-warning w-100 mb-2">
+                                <i class="fas fa-file-export"></i> Exportar Tabela
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function saveAllPrices() {
+    alert('Salvando alterações de preços...\n\nFuncionalidade será implementada para salvar no banco de dados.');
+}
+</script>
+{% endblock %}
+

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Farmácia Estoque{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm mt-5">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="bi bi-capsule text-primary" style="font-size: 3rem;"></i>
+                    <h3 class="mt-2">Farmácia Estoque</h3>
+                    <p class="text-muted">Entre com suas credenciais</p>
+                </div>
+
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="username" class="form-label">
+                            <i class="bi bi-person"></i> Usuário
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="username" 
+                               name="username" 
+                               required 
+                               autofocus
+                               placeholder="Digite seu usuário">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">
+                            <i class="bi bi-lock"></i> Senha
+                        </label>
+                        <input type="password" 
+                               class="form-control" 
+                               id="password" 
+                               name="password" 
+                               required
+                               placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-box-arrow-in-right"></i> Entrar
+                        </button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-4">
+                    <small class="text-muted">
+                        <i class="bi bi-shield-check"></i> 
+                        Sistema seguro com autenticação 2FA
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informações de teste -->
+        <div class="card mt-3 border-info">
+            <div class="card-header bg-info text-white">
+                <i class="bi bi-info-circle"></i> Usuários de Teste
+            </div>
+            <div class="card-body">
+                <small>
+                    <strong>Admin:</strong> admin / admin123<br>
+                    <strong>Chefe:</strong> chefe / chefe123<br>
+                    <strong>Funcionário:</strong> funcionario / func123
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
